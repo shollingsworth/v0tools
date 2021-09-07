@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>v0tools.servers.httpserv.BackgroundHttp : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          v0tools
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="v0tools.html">v0tools</a></code>.<code><a href="v0tools.servers.html">servers</a></code>.<code><a href="v0tools.servers.httpserv.html">httpserv</a></code>.<code><a href="v0tools.servers.httpserv.BackgroundHttp.html">BackgroundHttp</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">BackgroundHttp</span>(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#v0tools.servers.httpserv.BackgroundHttp">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Background HTTP server for staging pruposes.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id36">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span>Init BackgroundHttp server.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#path">path</a></code></td>
+    <td><span>Upload path.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#address">address</a></code></td>
+    <td><span>http address.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#port">port</a></code></td>
+    <td><span>http port.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#thread">thread</a></code></td>
+    <td><span>Server thread.</span></td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#url">url</a></code></td>
+    <td><span>URL of background server.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#start">start</a></code></td>
+    <td><span>Start Thread.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_run">_run</a></code></td>
+    <td><span>Run Server.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="v0tools.servers.httpserv.BackgroundHttp.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, path, address, port):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Init BackgroundHttp server.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">path</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">address</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">port</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.servers.httpserv.BackgroundHttp.path">
+    
+  </a>
+  <a name="path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">path</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Upload path.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.servers.httpserv.BackgroundHttp.address">
+    
+  </a>
+  <a name="address">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">address</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>http address.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.servers.httpserv.BackgroundHttp.port">
+    
+  </a>
+  <a name="port">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">port</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>http port.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.servers.httpserv.BackgroundHttp.thread">
+    
+  </a>
+  <a name="thread">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">thread</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Server thread.</p></div>
+  </div>
+</div><div class="baseproperty">
+  
+  <a name="v0tools.servers.httpserv.BackgroundHttp.url">
+    
+  </a>
+  <a name="url">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">url</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>URL of background server.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.servers.httpserv.BackgroundHttp.start">
+    
+  </a>
+  <a name="start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">start</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Start Thread.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="v0tools.servers.httpserv.BackgroundHttp._run">
+    
+  </a>
+  <a name="_run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_run</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Run Server.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for v0tools, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 1996-06-17 15:00:00.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

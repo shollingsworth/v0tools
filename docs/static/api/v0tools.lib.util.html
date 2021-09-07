@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>v0tools.lib.util : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          v0tools
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><code><a href="v0tools.html">v0tools</a></code>.<code><a href="v0tools.lib.html">lib</a></code>.<code><a href="v0tools.lib.util.html">util</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Various helper functions.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id26">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#splitter">splitter</a></code></td>
+    <td><span>Split a iterable into all length variations</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#randport">randport</a></code></td>
+    <td><span>Get Random TCP port number (above 1024).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#randstr">randstr</a></code></td>
+    <td><span>Get Random string from A-Za-z0-9 of length x.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#term_rows_cols">term_rows_cols</a></code></td>
+    <td><span>Return terminal rows / cols.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#rshell_stagetxt">rshell_stagetxt</a></code></td>
+    <td><span>Print Reverse shell staging information to paste into victim reverse shell</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#powershell_base64_encode">powershell_base64_encode</a></code></td>
+    <td><span>Encode a powershell compatible b64 string.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="v0tools.lib.util.splitter">
+    
+  </a>
+  <a name="splitter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">splitter</span>(arr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Split a iterable into all length variations</p><p>example: :</p><pre class="literalblock">
+    import json
+
+    test = "abcd"
+    output = list(map(list, splitter(test)))
+    print(len(output))
+    print(json.dumps(output, indent=4, separators=(",", " : ")))
+
+    print(len(list(splitter("abcdefghijkl"))))
+</pre><p>output: :</p><pre class="literalblock">
+    7
+    [
+        [
+            "a",
+            "bcd"
+        ],
+        [
+            "a",
+            "b",
+            "cd"
+        ],
+        [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        [
+            "a",
+            "bc",
+            "d"
+        ],
+        [
+            "ab",
+            "cd"
+        ],
+        [
+            "ab",
+            "c",
+            "d"
+        ],
+        [
+            "abc",
+            "d"
+        ]
+    ]
+    2047
+</pre></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.lib.util.randport">
+    
+  </a>
+  <a name="randport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">randport</span>():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get Random TCP port number (above 1024).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.lib.util.randstr">
+    
+  </a>
+  <a name="randstr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">randstr</span>(length=6):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get Random string from A-Za-z0-9 of length x.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.lib.util.term_rows_cols">
+    
+  </a>
+  <a name="term_rows_cols">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">term_rows_cols</span>():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Return terminal rows / cols.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"><span class="undocumented">Undocumented</span> (type: <code>Tuple[int, int]</code>)</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.lib.util.rshell_stagetxt">
+    
+  </a>
+  <a name="rshell_stagetxt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">rshell_stagetxt</span>():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Print Reverse shell staging information to paste into victim reverse shell</p><p>example: :</p><pre class="literalblock">
+    stty rows 16 cols 135
+    export TERM=xterm-256color
+    mkdir -p /dev/shm/V0_Rando/bin
+    cd /dev/shm/V0_Rando
+    ln -fs /dev/null .bash_history
+    export SHELL=/bin/bash
+    export HOME=$(pwd)
+    export PATH=$PATH:$(pwd)/bin
+    python -c 'import pty; pty.spawn("/bin/bash")' || python3 -c 'import pty; pty.spawn("/bin/bash")'
+</pre></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.lib.util.powershell_base64_encode">
+    
+  </a>
+  <a name="powershell_base64_encode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">powershell_base64_encode</span>(txt):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Encode a powershell compatible b64 string.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">txt</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for v0tools, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 1996-06-17 15:00:00.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

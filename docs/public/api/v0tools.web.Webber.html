@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>v0tools.web.Webber : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          v0tools
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="v0tools.html">v0tools</a></code>.<code><a href="v0tools.web.html">web</a></code>.<code><a href="v0tools.web.Webber.html">Webber</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">Webber</span>(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#v0tools.web.Webber">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Helper class for making http reqests to a remote.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id43">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span>Return Webber Object.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#session">session</a></code></td>
+    <td><span>requests.Session object.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#debug">debug</a></code></td>
+    <td><span>Debug Flag (be verbose).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_cookie">set_cookie</a></code></td>
+    <td><span>Set cookie.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get">get</a></code></td>
+    <td><span>Simple http get request.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_json">get_json</a></code></td>
+    <td><span>simple get request with json input send as encoded params.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#post_form_urlencoded_json">post_form_urlencoded_json</a></code></td>
+    <td><span>Post with HEADER_URL_ENCODED header and dict passed as argument.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#post_json">post_json</a></code></td>
+    <td><span>Post with default JSON content encoding.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="v0tools.web.Webber.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, debug=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Return Webber Object.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.web.Webber.session">
+    
+  </a>
+  <a name="session">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">session</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>requests.Session object.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.web.Webber.debug">
+    
+  </a>
+  <a name="debug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">debug</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Debug Flag (be verbose).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.web.Webber.set_cookie">
+    
+  </a>
+  <a name="set_cookie">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_cookie</span>(self, key, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set cookie.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.web.Webber.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get</span>(self, url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Simple http get request.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.web.Webber.get_json">
+    
+  </a>
+  <a name="get_json">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_json</span>(self, url, json_param):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>simple get request with json input send as encoded params.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">url</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">json_param</td><td><span class="undocumented">Undocumented</span> (type: <code>dict</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.web.Webber.post_form_urlencoded_json">
+    
+  </a>
+  <a name="post_form_urlencoded_json">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">post_form_urlencoded_json</span>(self, url, json_param):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Post with HEADER_URL_ENCODED header and dict passed as argument.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">url</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">json_param</td><td><span class="undocumented">Undocumented</span> (type: <code>dict</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.web.Webber.post_json">
+    
+  </a>
+  <a name="post_json">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">post_json</span>(self, url, json_param):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Post with default JSON content encoding.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">url</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">json_param</td><td><span class="undocumented">Undocumented</span> (type: <code>dict</code>)</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for v0tools, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 1996-06-17 15:00:00.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

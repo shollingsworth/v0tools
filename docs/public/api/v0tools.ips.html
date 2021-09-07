@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>v0tools.ips : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          v0tools
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><code><a href="v0tools.html">v0tools</a></code>.<code><a href="v0tools.ips.html">ips</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Ip URL obfs script.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id22">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#FUNKY_PERIOD">FUNKY_PERIOD</a></code></td>
+    <td><span>A period, but not a period.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#BUBBLE_MAP">BUBBLE_MAP</a></code></td>
+    <td><span>Dictionary of bubble map values {'1': '①', '2': '②', ...}</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#all_ip_encodings">all_ip_encodings</a></code></td>
+    <td><span>Show all variations of different ip obsfucation types.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_urls">get_urls</a></code></td>
+    <td><span>code: :: print(get_urls("216.58.194.196"))</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="v0tools.ips.FUNKY_PERIOD">
+    
+  </a>
+  <a name="FUNKY_PERIOD">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">FUNKY_PERIOD</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>A period, but not a period.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="v0tools.ips.BUBBLE_MAP">
+    
+  </a>
+  <a name="BUBBLE_MAP">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">BUBBLE_MAP</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Dictionary of bubble map values {'1': '①', '2': '②', ...}</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.ips.all_ip_encodings">
+    
+  </a>
+  <a name="all_ip_encodings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">all_ip_encodings</span>(ip):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Show all variations of different ip obsfucation types.</p><p>code: :</p><pre class="literalblock">
+    import json
+    res = all_ip_encodings("127.0.0.1")
+    print(json.dumps(res, indent=4, separators=(",", " : ")))
+</pre><p>output: :</p><pre class="literalblock">
+    {
+        "base" : [
+            "127.0.0.1",
+            "0x7f000001",
+            "2130706433",
+            "017700000001",
+            "\u2460\u2461\u2466\uff0e\u24ea\uff0e\u24ea\uff0e\u2460",
+            "%31%32%37%2e%30%2e%30%2e%31"
+        ],
+        "int" : [
+            "127.1",
+            "127.0.1",
+            "127.0.0.1"
+        ],
+        "hex" : [
+            "0x7f.0x000001",
+            "0x7f.0x00.0x0001",
+            "0x7f.0x00.0x00.0x01"
+        ],
+        "oct" : [
+            "0177.01",
+            "0177.00.01",
+            "0177.00.00.01"
+        ],
+        "mix" : [
+            "127.1",
+            "127.0x000001",
+            "127.01",
+            "0x7f.1",
+            "0x7f.0x000001",
+            "0x7f.01",
+            "0177.1",
+            "0177.0x000001",
+            "0177.01",
+            "127.0.1",
+            "127.0.0x0001",
+            "127.0.01",
+            "127.0x00.1",
+            "127.0x00.0x0001",
+            "127.0x00.01",
+            "127.00.1",
+            "127.00.0x0001",
+            "127.00.01",
+            "0x7f.0.1",
+            "0x7f.0.0x0001",
+            "0x7f.0.01",
+            "0x7f.0x00.1",
+            "0x7f.0x00.0x0001",
+            "0x7f.0x00.01",
+            "0x7f.00.1",
+            "0x7f.00.0x0001",
+            "0x7f.00.01",
+            "0177.0.1",
+            "0177.0.0x0001",
+            "0177.0.01",
+            "0177.0x00.1",
+            "0177.0x00.0x0001",
+            "0177.0x00.01",
+            "0177.00.1",
+            "0177.00.0x0001",
+            "0177.00.01",
+            "127.0.0.1",
+            "127.0.0.0x01",
+            "127.0.0.01",
+            "127.0.0x00.1",
+            "127.0.0x00.0x01",
+            "127.0.0x00.01",
+            "127.0.00.1",
+            "127.0.00.0x01",
+            "127.0.00.01",
+            "127.0x00.0.1",
+            "127.0x00.0.0x01",
+            "127.0x00.0.01",
+            "127.0x00.0x00.1",
+            "127.0x00.0x00.0x01",
+            "127.0x00.0x00.01",
+            "127.0x00.00.1",
+            "127.0x00.00.0x01",
+            "127.0x00.00.01",
+            "127.00.0.1",
+            "127.00.0.0x01",
+            "127.00.0.01",
+            "127.00.0x00.1",
+            "127.00.0x00.0x01",
+            "127.00.0x00.01",
+            "127.00.00.1",
+            "127.00.00.0x01",
+            "127.00.00.01",
+            "0x7f.0.0.1",
+            "0x7f.0.0.0x01",
+            "0x7f.0.0.01",
+            "0x7f.0.0x00.1",
+            "0x7f.0.0x00.0x01",
+            "0x7f.0.0x00.01",
+            "0x7f.0.00.1",
+            "0x7f.0.00.0x01",
+            "0x7f.0.00.01",
+            "0x7f.0x00.0.1",
+            "0x7f.0x00.0.0x01",
+            "0x7f.0x00.0.01",
+            "0x7f.0x00.0x00.1",
+            "0x7f.0x00.0x00.0x01",
+            "0x7f.0x00.0x00.01",
+            "0x7f.0x00.00.1",
+            "0x7f.0x00.00.0x01",
+            "0x7f.0x00.00.01",
+            "0x7f.00.0.1",
+            "0x7f.00.0.0x01",
+            "0x7f.00.0.01",
+            "0x7f.00.0x00.1",
+            "0x7f.00.0x00.0x01",
+            "0x7f.00.0x00.01",
+            "0x7f.00.00.1",
+            "0x7f.00.00.0x01",
+            "0x7f.00.00.01",
+            "0177.0.0.1",
+            "0177.0.0.0x01",
+            "0177.0.0.01",
+            "0177.0.0x00.1",
+            "0177.0.0x00.0x01",
+            "0177.0.0x00.01",
+            "0177.0.00.1",
+            "0177.0.00.0x01",
+            "0177.0.00.01",
+            "0177.0x00.0.1",
+            "0177.0x00.0.0x01",
+            "0177.0x00.0.01",
+            "0177.0x00.0x00.1",
+            "0177.0x00.0x00.0x01",
+            "0177.0x00.0x00.01",
+            "0177.0x00.00.1",
+            "0177.0x00.00.0x01",
+            "0177.0x00.00.01",
+            "0177.00.0.1",
+            "0177.00.0.0x01",
+            "0177.00.0.01",
+            "0177.00.0x00.1",
+            "0177.00.0x00.0x01",
+            "0177.00.0x00.01",
+            "0177.00.00.1",
+            "0177.00.00.0x01",
+            "0177.00.00.01"
+        ]
+    }
+</pre></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.ips.get_urls">
+    
+  </a>
+  <a name="get_urls">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_urls</span>(ip):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>code: :</p><pre class="literalblock">
+    print(get_urls("216.58.194.196"))
+</pre><p>output: :</p><pre class="literalblock">
+    base http://216.58.194.196
+    base http://0xd83ac2c4
+    base http://3627729604
+    base http://033016541304
+    base http://②①⑥．⑤⑧．①⑨④．①⑨⑥
+    base http://%32%31%36%2e%35%38%2e%31%39%34%2e%31%39%36
+    int http://216.3850948
+    int http://216.58.49860
+    int http://216.58.194.196
+    hex http://0xd8.0x3ac2c4
+    hex http://0xd8.0x3a.0xc2c4
+    hex http://0xd8.0x3a.0xc2.0xc4
+    oct http://0330.016541304
+    oct http://0330.072.0141304
+    oct http://0330.072.0302.0304
+    mix http://216.3850948
+    mix http://216.0x3ac2c4
+    mix http://216.016541304
+    mix http://0xd8.3850948
+    mix http://0xd8.0x3ac2c4
+    mix http://0xd8.016541304
+    mix http://0330.3850948
+    mix http://0330.0x3ac2c4
+    mix http://0330.016541304
+    mix http://216.58.49860
+    mix http://216.58.0xc2c4
+    mix http://216.58.0141304
+    mix http://216.0x3a.49860
+    mix http://216.0x3a.0xc2c4
+    mix http://216.0x3a.0141304
+    mix http://216.072.49860
+    mix http://216.072.0xc2c4
+    mix http://216.072.0141304
+    mix http://0xd8.58.49860
+    mix http://0xd8.58.0xc2c4
+    mix http://0xd8.58.0141304
+    mix http://0xd8.0x3a.49860
+    mix http://0xd8.0x3a.0xc2c4
+    mix http://0xd8.0x3a.0141304
+    mix http://0xd8.072.49860
+    mix http://0xd8.072.0xc2c4
+    mix http://0xd8.072.0141304
+    mix http://0330.58.49860
+    mix http://0330.58.0xc2c4
+    mix http://0330.58.0141304
+    mix http://0330.0x3a.49860
+    mix http://0330.0x3a.0xc2c4
+    mix http://0330.0x3a.0141304
+    mix http://0330.072.49860
+    mix http://0330.072.0xc2c4
+    mix http://0330.072.0141304
+    mix http://216.58.194.196
+    mix http://216.58.194.0xc4
+    mix http://216.58.194.0304
+    mix http://216.58.0xc2.196
+    mix http://216.58.0xc2.0xc4
+    mix http://216.58.0xc2.0304
+    mix http://216.58.0302.196
+    mix http://216.58.0302.0xc4
+    mix http://216.58.0302.0304
+    mix http://216.0x3a.194.196
+    mix http://216.0x3a.194.0xc4
+    mix http://216.0x3a.194.0304
+    mix http://216.0x3a.0xc2.196
+    mix http://216.0x3a.0xc2.0xc4
+    mix http://216.0x3a.0xc2.0304
+    mix http://216.0x3a.0302.196
+    mix http://216.0x3a.0302.0xc4
+    mix http://216.0x3a.0302.0304
+    mix http://216.072.194.196
+    mix http://216.072.194.0xc4
+    mix http://216.072.194.0304
+    mix http://216.072.0xc2.196
+    mix http://216.072.0xc2.0xc4
+    mix http://216.072.0xc2.0304
+    mix http://216.072.0302.196
+    mix http://216.072.0302.0xc4
+    mix http://216.072.0302.0304
+    mix http://0xd8.58.194.196
+    mix http://0xd8.58.194.0xc4
+    mix http://0xd8.58.194.0304
+    mix http://0xd8.58.0xc2.196
+    mix http://0xd8.58.0xc2.0xc4
+    mix http://0xd8.58.0xc2.0304
+    mix http://0xd8.58.0302.196
+    mix http://0xd8.58.0302.0xc4
+    mix http://0xd8.58.0302.0304
+    mix http://0xd8.0x3a.194.196
+    mix http://0xd8.0x3a.194.0xc4
+    mix http://0xd8.0x3a.194.0304
+    mix http://0xd8.0x3a.0xc2.196
+    mix http://0xd8.0x3a.0xc2.0xc4
+    mix http://0xd8.0x3a.0xc2.0304
+    mix http://0xd8.0x3a.0302.196
+    mix http://0xd8.0x3a.0302.0xc4
+    mix http://0xd8.0x3a.0302.0304
+    mix http://0xd8.072.194.196
+    mix http://0xd8.072.194.0xc4
+    mix http://0xd8.072.194.0304
+    mix http://0xd8.072.0xc2.196
+    mix http://0xd8.072.0xc2.0xc4
+    mix http://0xd8.072.0xc2.0304
+    mix http://0xd8.072.0302.196
+    mix http://0xd8.072.0302.0xc4
+    mix http://0xd8.072.0302.0304
+    mix http://0330.58.194.196
+    mix http://0330.58.194.0xc4
+    mix http://0330.58.194.0304
+    mix http://0330.58.0xc2.196
+    mix http://0330.58.0xc2.0xc4
+    mix http://0330.58.0xc2.0304
+    mix http://0330.58.0302.196
+    mix http://0330.58.0302.0xc4
+    mix http://0330.58.0302.0304
+    mix http://0330.0x3a.194.196
+    mix http://0330.0x3a.194.0xc4
+    mix http://0330.0x3a.194.0304
+    mix http://0330.0x3a.0xc2.196
+    mix http://0330.0x3a.0xc2.0xc4
+    mix http://0330.0x3a.0xc2.0304
+    mix http://0330.0x3a.0302.196
+    mix http://0330.0x3a.0302.0xc4
+    mix http://0330.0x3a.0302.0304
+    mix http://0330.072.194.196
+    mix http://0330.072.194.0xc4
+    mix http://0330.072.194.0304
+    mix http://0330.072.0xc2.196
+    mix http://0330.072.0xc2.0xc4
+    mix http://0330.072.0xc2.0304
+    mix http://0330.072.0302.196
+    mix http://0330.072.0302.0xc4
+    mix http://0330.072.0302.0304
+</pre></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for v0tools, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 1996-06-17 15:00:00.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

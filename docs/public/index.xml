@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on v0tools</title>
+    <link>https://v0tools.stev0.me/</link>
+    <description>Recent content in Home on v0tools</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://v0tools.stev0.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linrshell.py</title>
+      <link>https://v0tools.stev0.me/commands/linrshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/linrshell/</guid>
+      <description>Linux Reverse Shell stager.
+ Screencast     Help  usage: linrshell.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] [--rshell RSHELL] [--list] Linux Reverse Shell stager. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT Directory or file path. --rshell RSHELL, -s RSHELL Reverse shell type nc,socat --list, -l List reverse shell types   Source  #!</description>
+    </item>
+    
+    <item>
+      <title>winrshell.py</title>
+      <link>https://v0tools.stev0.me/commands/winrshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/winrshell/</guid>
+      <description>Windows Reverse Shell stager.
+ Screencast     Help  usage: winrshell.py [-h] [-p PORT] [--interface INTERFACE] [--ipv {4,6}] [--rshell RSHELL] [--list] Windows Reverse Shell stager. optional arguments: -h, --help show this help message and exit -p PORT, --port PORT Directory or file path. --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version --rshell RSHELL, -s RSHELL Reverse shell type psh,conpty --list, -l List reverse shell types   Source  #!</description>
+    </item>
+    
+    <item>
+      <title>v0_bash_complete_msfvenom.py</title>
+      <link>https://v0tools.stev0.me/commands/v0_bash_complete_msfvenom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/v0_bash_complete_msfvenom/</guid>
+      <description>Sourceable Autocomplete for msfvenom flags.
+ Screencast     Help  usage: v0_bash_complete_msfvenom.py [-h] Sourceable Autocomplete for msfvenom flags. optional arguments: -h, --help show this help message and exit   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;Sourceable Autocomplete for msfvenom flags.&amp;#34;&amp;#34;&amp;#34; from v0tools.msf import get_venom_auto_complete from v0tools.cli import Cli def main(args): &amp;#34;&amp;#34;&amp;#34;Run main function.&amp;#34;&amp;#34;&amp;#34; print(&amp;#34;##### Venom Autocomplete&amp;#34;, flush=True) print(get_venom_auto_complete(), flush=True) cli = Cli() cli.</description>
+    </item>
+    
+    <item>
+      <title>v0serv.py</title>
+      <link>https://v0tools.stev0.me/commands/v0serv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/v0serv/</guid>
+      <description>HTTP Serve a directory, or serve a single isolated file.
+ Screencast     Help  usage: v0serv.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] [-d {none,certutil,ps-download,ps-exec}] path HTTP Serve a directory, or serve a single isolated file. positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT Directory or file path.</description>
+    </item>
+    
+    <item>
+      <title>v0upload.py</title>
+      <link>https://v0tools.stev0.me/commands/v0upload/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/v0upload/</guid>
+      <description>HTTP server that accepts PUT requests from remotes.
+ Screencast     Help  usage: v0upload.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] path HTTP server that accepts PUT requests from remotes. positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT Directory or file path.</description>
+    </item>
+    
+    <item>
+      <title>cmd-not-found.py</title>
+      <link>https://v0tools.stev0.me/commands/cmd-not-found/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/cmd-not-found/</guid>
+      <description>Print how to install packages on different operating systems
+Thanks to https://command-not-found.com/ and Ƚukasz Lach https://twitter.com/lach_dev for hosting the site
+ Screencast     Help  usage: cmd-not-found.py [-h] command Print how to install packages on different operating systems Thanks to https://command-not-found.com/ and Ƚukasz Lach https://twitter.com/lach_dev for hosting the site positional arguments: command command help optional arguments: -h, --help show this help message and exit   Source  #!</description>
+    </item>
+    
+    <item>
+      <title>cmdrec.py</title>
+      <link>https://v0tools.stev0.me/commands/cmdrec/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/cmdrec/</guid>
+      <description>Terminal Recorder using ffmpeg and KDE Console.
+ Screencast     Help  usage: cmdrec.py [-h] [--overwrite] [--shell_geometry SHELL_GEOMETRY] [--recording_geometry RECORDING_GEOMETRY] [--scr SCR] [--noterm] [--terminal {konsole}] dest_file Terminal Recorder using ffmpeg and KDE Console. positional arguments: dest_file destination file, supported types mp4,gif,webm optional arguments: -h, --help show this help message and exit --overwrite, -y Overwrite destination file --shell_geometry SHELL_GEOMETRY, -g SHELL_GEOMETRY geometry in the following format x,y,pixel-width,pixel-height --recording_geometry RECORDING_GEOMETRY, -r RECORDING_GEOMETRY geometry in the following format for recording area x,y,pixel-width,pixel-height --scr SCR, -k SCR Screen Keys Screen --noterm, -n Do not spawn a new terminal --terminal {konsole}, -t {konsole} terminal command   Source  #!</description>
+    </item>
+    
+    <item>
+      <title>dnsrebind.py</title>
+      <link>https://v0tools.stev0.me/commands/dnsrebind/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/dnsrebind/</guid>
+      <description>dns rebinding fqdn.
+ Screencast     Help  usage: dnsrebind.py [-h] [--test_count TEST_COUNT] [--verbose] normalip rebindip dns rebinding fqdn. positional arguments: normalip initial ip rebindip rebind ip optional arguments: -h, --help show this help message and exit --test_count TEST_COUNT, -t TEST_COUNT test count --verbose, -v verbose   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;dns rebinding fqdn.&amp;#34;&amp;#34;&amp;#34; from v0tools.attacks.dnsrebind import get_fqdn from v0tools.lib.log import get_log from v0tools.</description>
+    </item>
+    
+    <item>
+      <title>ip_urls.py</title>
+      <link>https://v0tools.stev0.me/commands/ip_urls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/ip_urls/</guid>
+      <description>Generate a list of obfuscated ip variations and print to stdout.
+ Screencast     Help  usage: ip_urls.py [-h] ip Generate a list of obfuscated ip variations and print to stdout. positional arguments: ip ip address optional arguments: -h, --help show this help message and exit   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;Generate a list of obfuscated ip variations and print to stdout.</description>
+    </item>
+    
+    <item>
+      <title>php_search_vuln.py</title>
+      <link>https://v0tools.stev0.me/commands/php_search_vuln/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/php_search_vuln/</guid>
+      <description>Search for vulnerable calls / strings in php code.
+Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git
+ Screencast     Help  usage: php_search_vuln.py [-h] [--filter FILTER] [--inc_lines INC_LINES] path Search for vulnerable calls / strings in php code. Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --filter FILTER, -f FILTER i.e. *.php or *.py --inc_lines INC_LINES, -l INC_LINES number of lines to include before / after match   Source  #!</description>
+    </item>
+    
+    <item>
+      <title>unicodes.py</title>
+      <link>https://v0tools.stev0.me/commands/unicodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/unicodes/</guid>
+      <description>print unicode values and associated information to stdout.
+ Screencast     Help  usage: unicodes.py [-h] [-f [FILTER ...]] print unicode values and associated information to stdout. example: unicodes.py | fzf optional arguments: -h, --help show this help message and exit -f [FILTER ...], --filter [FILTER ...] Filter string   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;print unicode values and associated information to stdout.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://v0tools.stev0.me/sys_prerequisites/arch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/sys_prerequisites/arch/</guid>
+      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo pacman -S fzf konsole socat rlwrap ffmpeg nmap metasploit screenkey </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://v0tools.stev0.me/sys_prerequisites/debian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/sys_prerequisites/debian/</guid>
+      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo apt install fzf konsole socat rlwrap ffmpeg ncat screenkey # Install msfvenom curl https://apt.metasploit.com/metasploit-framework.gpg.key | apt-key add - echo deb http://apt.metasploit.com buster main &amp;gt;&amp;gt; /etc/apt/sources.list apt update apt install -y metasploit-framework </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://v0tools.stev0.me/sys_prerequisites/fedora/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/sys_prerequisites/fedora/</guid>
+      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo yum -y install konsole socat nmap-ncat screenkey # Install fzf git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install source ~/.bashrc # Install rlwrap sudo yum -y group install &amp;#34;Development Tools&amp;#34; sudo yum -y install readline-devel git clone https://github.com/hanslub42/rlwrap.git cd rlwrap autoreconf --install ./configure make sudo make install # Install ffmpeg sudo yum -y install epel-release sudo yum -y localinstall --nogpgcheck https://download1.</description>
+    </item>
+    
+  </channel>
+</rss>

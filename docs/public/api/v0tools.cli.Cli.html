@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>v0tools.cli.Cli : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          v0tools
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="v0tools.html">v0tools</a></code>.<code><a href="v0tools.cli.html">cli</a></code>.<code><a href="v0tools.cli.Cli.html">Cli</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">Cli</span>(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#v0tools.cli.Cli">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Cli Class.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span>Return Cli Object.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#description">description</a></code></td>
+    <td><span>Argument description.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#entrypoint">entrypoint</a></code></td>
+    <td><span>Function entrypoint.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#required_binaries">required_binaries</a></code></td>
+    <td><span>Required Binary list.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#parser">parser</a></code></td>
+    <td><span>ArgumentParser object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_path">add_path</a></code></td>
+    <td><span>Directory or file path.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_ipv_interface">add_ipv_interface</a></code></td>
+    <td><span>Add ipv / interface combo.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_port">add_port</a></code></td>
+    <td><span>port number, or default random port in range:1025-65535.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_entrypoint">set_entrypoint</a></code></td>
+    <td><span>Set cli entrypoint value.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_required_binaries">set_required_binaries</a></code></td>
+    <td><span>Set required binary list.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#checks">checks</a></code></td>
+    <td><span>Run checks.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#run_nocatch">run_nocatch</a></code></td>
+    <td><span>Run without catching exceptions.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#run">run</a></code></td>
+    <td><span>Run cli program normally.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_parse">get_parse</a></code></td>
+    <td><span>Parge args.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, description=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Return Cli Object.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.cli.Cli.description">
+    
+  </a>
+  <a name="description">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">description</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Argument description.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.cli.Cli.entrypoint">
+    
+  </a>
+  <a name="entrypoint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">entrypoint</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Function entrypoint.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.cli.Cli.required_binaries">
+    
+  </a>
+  <a name="required_binaries">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">required_binaries</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Required Binary list.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="v0tools.cli.Cli.parser">
+    
+  </a>
+  <a name="parser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">parser</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>ArgumentParser object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.add_path">
+    
+  </a>
+  <a name="add_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_path</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Directory or file path.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.add_ipv_interface">
+    
+  </a>
+  <a name="add_ipv_interface">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_ipv_interface</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Add ipv / interface combo.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.add_port">
+    
+  </a>
+  <a name="add_port">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_port</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>port number, or default random port in range:1025-65535.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.set_entrypoint">
+    
+  </a>
+  <a name="set_entrypoint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_entrypoint</span>(self, function):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set cli entrypoint value.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">function</td><td><span class="undocumented">Undocumented</span> (type: <code>typing.Callable</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.set_required_binaries">
+    
+  </a>
+  <a name="set_required_binaries">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_required_binaries</span>(self, binlist):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set required binary list.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">binlist</td><td><span class="undocumented">Undocumented</span> (type: <code>typing.List</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.checks">
+    
+  </a>
+  <a name="checks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">checks</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Run checks.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.run_nocatch">
+    
+  </a>
+  <a name="run_nocatch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">run_nocatch</span>(self, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Run without catching exceptions.</p><p>Useful in unit tests</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">args</td><td><span class="undocumented">Undocumented</span> (type: <code>argparse.Namespace</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">run</span>(self, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Run cli program normally.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">args</td><td><span class="undocumented">Undocumented</span> (type: <code>argparse.Namespace</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="v0tools.cli.Cli.get_parse">
+    
+  </a>
+  <a name="get_parse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_parse</span>(self, test_arr=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Parge args.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for v0tools, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 1996-06-17 15:00:00.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

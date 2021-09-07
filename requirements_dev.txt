@@ -1,0 +1,10 @@
+beautifulsoup4
+lxml
+pyfzf
+psutil
+argcomplete
+html2text
+requests
+jinja2
+pyaml
+twine

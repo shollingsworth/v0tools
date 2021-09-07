@@ -1,0 +1,4 @@
+include src/v0tools/data/*
+include VERSION
+include README.md
+global-exclude *.pyc

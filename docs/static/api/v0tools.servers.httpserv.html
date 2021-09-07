@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>v0tools.servers.httpserv : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          v0tools
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><code><a href="v0tools.html">v0tools</a></code>.<code><a href="v0tools.servers.html">servers</a></code>.<code><a href="v0tools.servers.httpserv.html">httpserv</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Http Servers Module.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id34">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#SERV_PREFIXES">SERV_PREFIXES</a></code></td>
+    <td><span>SERVER helper prefixes for windows and linux based systems.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#PS_REMOTE_DOWNLOAD_OBJ">PS_REMOTE_DOWNLOAD_OBJ</a></code></td>
+    <td><span>Powershell Download Template.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="v0tools.servers.httpserv.PutHTTPRequestHandler.html">PutHTTPRequestHandler</a></code></td>
+    <td><span>Extend SimpleHTTPRequestHandler to handle PUT requests</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#serve">serve</a></code></td>
+    <td><span>Server a file or directory via http.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#uploader">uploader</a></code></td>
+    <td><span>Server PUT requests for file uploads.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="v0tools.servers.httpserv.BackgroundHttp.html">BackgroundHttp</a></code></td>
+    <td><span>Background HTTP server for staging pruposes.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#powershell_serv">powershell_serv</a></code></td>
+    <td><span>Powershell server in a temporary thread.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#main">main</a></code></td>
+    <td><span>Run main function.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="v0tools.servers.httpserv.SERV_PREFIXES">
+    
+  </a>
+  <a name="SERV_PREFIXES">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SERV_PREFIXES</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>SERVER helper prefixes for windows and linux based systems.</p></div> (type: <code>dict[str, str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="v0tools.servers.httpserv.PS_REMOTE_DOWNLOAD_OBJ">
+    
+  </a>
+  <a name="PS_REMOTE_DOWNLOAD_OBJ">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">PS_REMOTE_DOWNLOAD_OBJ</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Powershell Download Template.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.servers.httpserv.serve">
+    
+  </a>
+  <a name="serve">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">serve</span>(address, port, serv_path, display='none'):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Server a file or directory via http.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">address</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">port</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">serv_path</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">display</td><td><span class="undocumented">Undocumented</span></td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.servers.httpserv.uploader">
+    
+  </a>
+  <a name="uploader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">uploader</span>(address, port, serv_path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Server PUT requests for file uploads.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">address</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">port</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">serv_path</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.servers.httpserv.powershell_serv">
+    
+  </a>
+  <a name="powershell_serv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">powershell_serv</span>(address, port, file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Powershell server in a temporary thread.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">address</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">port</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr><tr><td></td><td class="fieldArg">file</td><td><span class="undocumented">Undocumented</span> (type: <code>str</code>)</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="v0tools.servers.httpserv.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">main</span>():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Run main function.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for v0tools, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 1996-06-17 15:00:00.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

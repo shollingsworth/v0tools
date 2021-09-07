@@ -1,0 +1,69 @@
+/* You can add custom styles here. */
+video {
+    /* override other styles to make responsive */
+    width: 100% !important;
+    height: auto !important;
+}
+/* Global customization */
+
+:root {
+  --code-max-height: 60rem;
+}
+
+/* Dark mode theming */
+:root[color-mode="dark"] {
+  --header-background: black;
+  --header-font-color: #ffffff;
+
+  --body-background: black;
+  --body-font-color: white;
+
+  --button-background: #62cb97;
+  --button-border-color: #4ec58a;
+
+  --link-color: red;
+  --link-color-visited: salmon;
+
+  --code-background: black;
+  --code-accent-color: #262b2f;
+  --code-accent-color-lite: #2b3035;
+
+  --accent-color: #2b3035;
+  --accent-color-lite: #2f353a;
+
+  --control-icons: #b2bac1;
+
+  --footer-background: #2f333e;
+  --footer-font-color: #ffffff;
+  --footer-link-color: #ffcc5c;
+  --footer-link-color-visited: #ffcc5c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-background: #4ec58a;
+    --header-font-color: #ffffff;
+
+    --body-background: #343a40;
+    --body-font-color: #ced3d8;
+
+    --button-background: #62cb97;
+    --button-border-color: #4ec58a;
+
+    --link-color: #7ac29e;
+    --link-color-visited: #c27a9e;
+
+    --code-background: #2f353a;
+    --code-accent-color: #262b2f;
+    --code-accent-color-lite: #2b3035;
+
+    --accent-color: #2b3035;
+    --accent-color-lite: #2f353a;
+
+    --control-icons: #b2bac1;
+
+    --footer-background: #2f333e;
+    --footer-font-color: #ffffff;
+    --footer-link-color: #ffcc5c;
+    --footer-link-color-visited: #ffcc5c;
+  }
+}
