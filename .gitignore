@@ -5,3 +5,4 @@ tmp/
 *.webm
 dist/
 src/v0tools.egg-info
+*.zip
