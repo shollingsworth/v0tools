@@ -8,9 +8,6 @@ documentation: clean
 	@echo "Running docs"
 	mkdir -p $(docs)/static/api
 	./scripts/gendoc.py
-	# ./scripts/genenvconfig.py
-	# ./scripts/genbadges.py
-	# ./scripts/genpypyreadme.py
 	pydoctor \
 		-v \
 		-W \
@@ -43,8 +40,8 @@ upload:
 bump_version:
 	# order is important here
 	./scripts/version_bump.py
-	./scripts/genchangelog.py
-	git add ./CHANGELOG.md
+	./scripts/gendoc.py
+	git add ./docs/content/changelog/_index.md
 	git add ./VERSION
 	git diff HEAD
 	git commit -S --amend

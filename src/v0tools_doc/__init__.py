@@ -15,8 +15,11 @@ BINDIR = BASE.joinpath("bin")
 MEDIA_DIR = ROOT_DIR.joinpath("static", "cli")
 TEMPLATE_DIR = BASE.joinpath("templates")
 
+
 # DOC_MAIN = CONTENT_DIR.joinpath("_index.md")
 
+SETUP_CFG = BASE.joinpath("setup.cfg")
+VERSION_FILE = BASE.joinpath("VERSION")
 GITHUB_README = BASE.joinpath("README.md")
 SITE_MAIN = CONTENT_DIR.joinpath("_index.md")
 

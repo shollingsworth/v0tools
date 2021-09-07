@@ -5,9 +5,28 @@ import v0tools_doc.template as template
 from v0tools.syspkgs import get_install_instructions
 from v0tools_doc import cli, EnvGroup
 from v0tools_doc.hugo import ShortCode
-from v0tools_doc import hugo
+from v0tools_doc import hugo, changelog, badges
 from pathlib import Path
 import shutil
+
+ABOUT = """
+{{< toc >}}
+
+# Theme
+Hugo Theme: https://geekdocs.de
+
+# About Me
+SRE by day, security wonk by night Feel free to reach out on the Hack
+the box [discord](https://discord.com/invite/hackthebox) , DM:`stev0`
+
+""".lstrip()
+
+
+def _root_path(dirname):
+    _dir = v0tools_doc.CONTENT_DIR.joinpath(dirname)
+    _dir.exists() or _dir.mkdir()
+    file = _dir.joinpath("_index.md")
+    return _dir, file
 
 
 def clean(fpath: Path):
@@ -26,13 +45,25 @@ if __name__ == "__main__":
     obj = cli.DocGroup()
     dval = dict(obj)
 
-    config_dir = v0tools_doc.CONTENT_DIR.joinpath("configuration")
-    config_dir.exists() or config_dir.mkdir()
-    config_file = config_dir.joinpath("_index.md")
+    config_dir, config_file = _root_path("configuration")
+    inst_dir, inst_file = _root_path("sys_prerequisites")
+    change_dir, change_file = _root_path("changelog")
+    about_dir, about_file = _root_path("about")
 
-    inst_dir = v0tools_doc.CONTENT_DIR.joinpath("sys_prerequisites")
-    inst_dir.exists() or inst_dir.mkdir()
-    inst_file = inst_dir.joinpath("_index.md")
+    with about_file.open("w") as fileh:
+        page = hugo.Page("About", "About Page")
+        page.weight = 100
+        page.body = ABOUT
+        fileh.write(page.content)
+
+    with change_file.open("w") as fileh:
+        output = []
+        page = hugo.Page("Changlog", "Version Control Changelog")
+        page.weight = 150
+        output.append(ShortCode.expand("{{< toc >}}", "TOC"))
+        output.append(changelog.get_changlog())
+        page.body = "\n".join(output)
+        fileh.write(page.content)
 
     with inst_file.open("w") as fileh:
         output = []
@@ -65,14 +96,17 @@ if __name__ == "__main__":
         fileh.write(page.content)
 
     with v0tools_doc.GITHUB_README.open("w") as fileh:
-        output = template.GITHUB_README.render(coll=dval)
-        fileh.write(output)
+        output = []
+        output.append(badges.get_badges())
+        output.append(template.GITHUB_README.render(coll=dval))
+        fileh.write("\n".join(output))
 
     with v0tools_doc.SITE_MAIN.open("w") as fileh:
         output = template.MAIN_README.render(coll=dval)
         page = hugo.Page("Home", "Welcome to v0tools!")
         body = "\n".join(
             [
+                badges.get_badges(),
                 "{{< toc >}}",
                 output,
                 "",

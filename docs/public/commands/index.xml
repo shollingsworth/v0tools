@@ -4,7 +4,11 @@
     <title>Commands on v0tools</title>
     <link>https://v0tools.stev0.me/commands/</link>
     <description>Recent content in Commands on v0tools</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://v0tools.stev0.me/commands/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://v0tools.stev0.me/commands/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>linrshell.py</title>
       <link>https://v0tools.stev0.me/commands/linrshell/</link>
@@ -114,7 +118,7 @@ Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git
       
       <guid>https://v0tools.stev0.me/commands/unicodes/</guid>
       <description>print unicode values and associated information to stdout.
- Screencast     Help  usage: unicodes.py [-h] [-f [FILTER ...]] print unicode values and associated information to stdout. example: unicodes.py | fzf optional arguments: -h, --help show this help message and exit -f [FILTER ...], --filter [FILTER ...] Filter string   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;print unicode values and associated information to stdout.</description>
+ Screencast     Help  usage: unicodes.py [-h] [-f [FILTER [FILTER ...]]] print unicode values and associated information to stdout. example: unicodes.py | fzf optional arguments: -h, --help show this help message and exit -f [FILTER [FILTER ...]], --filter [FILTER [FILTER ...]] Filter string   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;print unicode values and associated information to stdout.</description>
     </item>
     
   </channel>

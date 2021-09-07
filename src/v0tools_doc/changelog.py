@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Version bumper on upload."""
-import pathlib
 import subprocess
 from datetime import datetime
 import configparser
+import v0tools_doc
 
-BASE = pathlib.Path(__file__).resolve().parent.parent
-VFILE = BASE.joinpath("VERSION")
-DESTFILE = BASE.joinpath("CHANGELOG.md")
-CFG = BASE.joinpath("setup.cfg")
 
 DTFMT = "%Y-%m-%d %H:%M UTC"
 
@@ -28,7 +24,7 @@ def commit_details(commit):
 
 def get_repo_url():
     config = configparser.ConfigParser()
-    config.read(CFG)
+    config.read(v0tools_doc.SETUP_CFG)
     vals = [
         list(map(str.strip, i.strip().split("=")))
         for i in config.get("metadata", "project_urls").splitlines()
@@ -43,8 +39,7 @@ def _sort_tags(tag):
     return tuple(arr)
 
 
-def main():
-    """Run main function."""
+def get_changlog():
     cmd = "git rev-list --max-parents=0 HEAD".split()
     initial_commit = subprocess.check_output(cmd, encoding="utf-8").strip()
     tags = subprocess.check_output(
@@ -61,14 +56,14 @@ def main():
         except IndexError:
             end, start = tags[i], initial_commit
 
-        endtxt = "v" + VFILE.read_text() if end == "HEAD" else end
+        endtxt = "v" + v0tools_doc.VERSION_FILE.read_text() if end == "HEAD" else end
         commit_list = commits(start, end)
         if not commit_list:
             continue
         content.append(f"# {endtxt}")
         for idx, com in enumerate(commit_list):
             dt, msg, desc = commit_details(com)
-            content.append(f"#### {msg}")
+            content.append(f"{msg}")
             if idx == 0 and end == "HEAD":
                 content.append(f"> {dt} [HEAD]({url}/commit/HEAD)")
             else:
@@ -79,11 +74,4 @@ def main():
                 content.append(desc)
                 content.append(f"```")
         content.append("---")
-    out = "\n".join(content)
-    # print(out)
-    with open(DESTFILE, "w") as fileh:
-        fileh.write(out)
-
-
-if __name__ == "__main__":
-    main()
+    return "\n".join(content)
