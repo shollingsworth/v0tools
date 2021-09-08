@@ -4,7 +4,7 @@ docs := ./docs
 srcdir := ./src
 pkgname := v0tools
 
-documentation: clean
+gendoc:
 	@echo "Running docs"
 	mkdir -p $(docs)/static/api
 	./scripts/gendoc.py
@@ -15,6 +15,8 @@ documentation: clean
 		--buildtime="1996-06-17 15:00:00" \
 		$(srcdir)/$(pkgname)
 	./scripts/checkundocced.py
+
+documentation: clean gendoc hugo_build
 
 docker_tests:
 	./scripts/dockertest.sh ./docker/deb36.Dockerfile
@@ -40,8 +42,11 @@ upload:
 bump_version:
 	# order is important here
 	./scripts/version_bump.py
-	./scripts/gendoc.py
-	git add ./docs/content/changelog/_index.md
+	bash -c "git tag v$$(cat VERSION)"
+	make documentation
+	make hugo_build
+	bash -c "git tag --delete v$$(cat VERSION)"
+	git add ./docs
 	git add ./VERSION
 	git diff HEAD
 	git commit -S --amend
@@ -66,12 +71,13 @@ clean:
 	find -type f -name '*.pyc' -delete -print
 	find -type d -name __pycache__ -delete -print
 
-server:
+hugo_build:
 	rm -rfv $(docs)/public
 	mkdir -p $(docs)/public
+	bash -c "cd $(docs); hugo"
+
+server: hugo_build
 	bash -c "cd $(docs); hugo server"
 
-hugo_deploy: documentation
-	rm -rfv $(docs)/public
-	mkdir -p $(docs)/public
-	bash -c "cd $(docs); hugo; hugo deploy"
+hugo_deploy: documentation hugo_build
+	bash -c "cd $(docs); hugo deploy"

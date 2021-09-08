@@ -40,7 +40,7 @@ def clean(fpath: Path):
             i.unlink()
 
 
-if __name__ == "__main__":
+def main():
     clean(v0tools_doc.CONTENT_DIR)
     obj = cli.DocGroup()
     dval = dict(obj)
@@ -147,3 +147,7 @@ if __name__ == "__main__":
         fileh.write(page.content)
 
     obj.write_content()
+
+
+if __name__ == "__main__":
+    main()

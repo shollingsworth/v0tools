@@ -37,7 +37,7 @@ def pypis(pkgname):
         f"https://img.shields.io/pypi/status/{pkgname}",  # stable / dev
         f"https://img.shields.io/pypi/l/{pkgname}",  # license
         # this doesn't seem to be working
-        # f"https://img.shields.io/pypi/dm/{pkgname}",  # downloads / month
+        f"https://img.shields.io/pypi/dm/{pkgname}",  # downloads / month
         f"https://img.shields.io/pypi/pyversions/{pkgname}",  # python versions
         f"https://img.shields.io/pypi/implementation/{pkgname}",  # implimentation
     ]
