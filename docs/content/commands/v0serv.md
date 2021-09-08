@@ -9,7 +9,7 @@ weight: 20
 
 > **HTTP Serve a directory, or serve a single isolated file.**
 
-{{< tabs "51fe5bc2ee3531b6e12278a2177c41af" >}}
+{{< tabs "35a62f98c74384f347e959d09d95c187" >}}
 {{< tab "Screencast" >}}
 <div class="video-container">
 <video controls autoplay="true" loop="true">
@@ -32,7 +32,7 @@ optional arguments:
   --interface INTERFACE, -i INTERFACE
                         network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear
   --ipv {4,6}           IP Version
-  -p PORT, --port PORT  Directory or file path.
+  -p PORT, --port PORT  port number, or default random port in range:1025-65535.
   -d {none,certutil,ps-download,ps-exec}, --display {none,certutil,ps-download,ps-exec}
                         display type
 ```

@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>System Install Prerequisites on v0tools</title>
+    <title>System Install on v0tools</title>
     <link>https://v0tools.stev0.me/sys_prerequisites/</link>
-    <description>Recent content in System Install Prerequisites on v0tools</description>
+    <description>Recent content in System Install on v0tools</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	<atom:link href="https://v0tools.stev0.me/sys_prerequisites/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
+      <title>Arch Linux</title>
       <link>https://v0tools.stev0.me/sys_prerequisites/arch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://v0tools.stev0.me/sys_prerequisites/arch/</guid>
-      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo pacman -S fzf konsole socat rlwrap ffmpeg nmap metasploit screenkey </description>
+      <description># Python / Package Pre-reqs sudo pacman -S python-pip # Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo pacman -S fzf konsole socat rlwrap ffmpeg nmap metasploit screenkey # install pip package pip3 install v0tools </description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://v0tools.stev0.me/sys_prerequisites/debian/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://v0tools.stev0.me/sys_prerequisites/debian/</guid>
-      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo apt install fzf konsole socat rlwrap ffmpeg ncat screenkey # Install msfvenom curl https://apt.metasploit.com/metasploit-framework.gpg.key | apt-key add - echo deb http://apt.metasploit.com buster main &amp;gt;&amp;gt; /etc/apt/sources.list apt update apt install -y metasploit-framework </description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>RHEL/CentOS/Fedora</title>
       <link>https://v0tools.stev0.me/sys_prerequisites/fedora/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://v0tools.stev0.me/sys_prerequisites/fedora/</guid>
-      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo yum -y install konsole socat nmap-ncat screenkey # Install fzf git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install source ~/.bashrc # Install rlwrap sudo yum -y group install &amp;#34;Development Tools&amp;#34; sudo yum -y install readline-devel git clone https://github.com/hanslub42/rlwrap.git cd rlwrap autoreconf --install ./configure make sudo make install # Install ffmpeg sudo yum -y install epel-release sudo yum -y localinstall --nogpgcheck https://download1.</description>
+      <description># Python / Package Pre-reqs sudo yum -y install python3-pip python3-devel gcc git # Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo yum -y install konsole socat nmap-ncat screenkey # Install fzf git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install source ~/.bashrc # Install rlwrap sudo yum -y group install &amp;#34;Development Tools&amp;#34; sudo yum -y install readline-devel git clone https://github.com/hanslub42/rlwrap.git cd rlwrap autoreconf --install ./configure make sudo make install # Install ffmpeg sudo yum -y install epel-release sudo yum -y localinstall --nogpgcheck https://download1.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu / Debian based OS&#39;s</title>
+      <link>https://v0tools.stev0.me/sys_prerequisites/debian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/sys_prerequisites/debian/</guid>
+      <description># Python / Package Pre-reqs sudo apt install python3-pip # Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo apt install fzf konsole socat rlwrap ffmpeg ncat screenkey # Install msfvenom curl https://apt.metasploit.com/metasploit-framework.gpg.key | apt-key add - echo deb http://apt.metasploit.com buster main &amp;gt;&amp;gt; /etc/apt/sources.list apt update apt install -y metasploit-framework # install pip package pip3 install v0tools </description>
     </item>
     
   </channel>

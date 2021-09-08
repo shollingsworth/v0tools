@@ -67,25 +67,46 @@ if __name__ == "__main__":
 
     with inst_file.open("w") as fileh:
         output = []
-        output.append("## System Install Prerequisites")
         output.append("{{< toc-tree >}}")
-        page = hugo.Page("System Install Prerequisites", "System Install Prerequisites")
+        page = hugo.Page(
+            "System Install",
+            "OS Specific Install Procedures",
+        )
         page.weight = 5
         page.body = "\n".join(output)
         fileh.write(page.content)
 
-    for dist, instructions in get_install_instructions().items():
+    expand_vals = {}
+
+    for dist, (prereq, desc, instructions) in get_install_instructions().items():
         fpath = inst_dir.joinpath(f"{dist}.md")
         txt = []
-        # txt.append(f"# {dist.capitalize()}")
-        txt.append(ShortCode.code(instructions, "bash"))
+        prereq_line = "\n".join(
+            [
+                "# Python / Package Pre-reqs",
+                prereq,
+            ]
+        )
+
+        exval = []
+        exval.append(ShortCode.code(prereq_line, "bash"))
+        exval.append(ShortCode.code(instructions, "bash"))
+        exval.append(
+            ShortCode.code("# install pip package\npip3 install v0tools", "bash")
+        )
+
+        expand_vals[desc] = "\n".join(exval)
+        txt.append("\n".join(exval))
+
+        page = hugo.Page(desc, "")
+        page.body = "\n".join(txt)
         with fpath.open("w") as fileh:
-            fileh.write("\n".join(txt))
+            fileh.write(page.content)
 
     with config_file.open("w") as fileh:
         eobj = EnvGroup()
         output = []
-        output.append("## Environment Variable Configuration Values")
+        output.append("## Environment Variable Config Keys")
         for i in eobj.vals:
             header_val = ShortCode.hint_info(i["name"])
             output.append(f"{header_val}")
@@ -98,18 +119,26 @@ if __name__ == "__main__":
     with v0tools_doc.GITHUB_README.open("w") as fileh:
         output = []
         output.append(badges.get_badges())
+        output.append("")
         output.append(template.GITHUB_README.render(coll=dval))
         fileh.write("\n".join(output))
 
     with v0tools_doc.SITE_MAIN.open("w") as fileh:
         output = template.MAIN_README.render(coll=dval)
         page = hugo.Page("Home", "Welcome to v0tools!")
+        exvals = "\n".join(
+            [ShortCode.expand(txt, desc) for desc, txt in expand_vals.items()]
+        )
         body = "\n".join(
             [
                 badges.get_badges(),
                 "{{< toc >}}",
                 output,
                 "",
+                "## Quickstart / Install",
+                exvals,
+                "## Api",
+                "> **API Documentation can be found [here](https://v0tools.stev0.me/api)**",
                 "## Toc",
                 "{{< toc-tree >}}",
             ]

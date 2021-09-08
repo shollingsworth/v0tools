@@ -1,3 +1,16 @@
+---
+geekdocAlign: left
+title: RHEL/CentOS/Fedora
+weight: 99
+
+---
+
+
+```bash
+# Python / Package Pre-reqs
+sudo yum -y install python3-pip python3-devel gcc git
+```
+
 
 ```bash
 # Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey
@@ -31,3 +44,10 @@ sudo yum-config-manager --add-repo=https://rpm.metasploit.com/
 sudo yum -y install metasploit-framework.x86_64
 
 ```
+
+
+```bash
+# install pip package
+pip3 install v0tools
+```
+

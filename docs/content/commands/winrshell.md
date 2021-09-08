@@ -9,7 +9,7 @@ weight: 10
 
 > **Windows Reverse Shell stager.**
 
-{{< tabs "4b480b83c922c22a2d30154c8eec9696" >}}
+{{< tabs "74a9ed10a206c650b4f48017b855edf7" >}}
 {{< tab "Screencast" >}}
 <div class="video-container">
 <video controls autoplay="true" loop="true">
@@ -26,7 +26,7 @@ Windows Reverse Shell stager.
 
 optional arguments:
   -h, --help            show this help message and exit
-  -p PORT, --port PORT  Directory or file path.
+  -p PORT, --port PORT  port number, or default random port in range:1025-65535.
   --interface INTERFACE, -i INTERFACE
                         network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear
   --ipv {4,6}           IP Version

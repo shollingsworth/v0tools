@@ -7,7 +7,7 @@ weight: 2
 
 ---
 
-## Environment Variable Configuration Values
+## Environment Variable Config Keys
 {{< hint info >}}
 V0_POWERSHELL_CONPTY
 {{< /hint >}}

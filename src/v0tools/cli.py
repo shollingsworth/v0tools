@@ -64,7 +64,7 @@ class Cli(object):
         self.parser.add_argument(
             "-p",
             "--port",
-            help=self.add_path.__doc__,
+            help=self.add_port.__doc__,
             type=str,
         )
 

@@ -9,17 +9,17 @@
   
   <url>
     <loc>https://v0tools.stev0.me/sys_prerequisites/</loc>
-    <lastmod>2021-09-07T11:03:56-07:00</lastmod>
+    <lastmod>2021-09-07T13:02:54-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://v0tools.stev0.me/commands/linrshell/</loc>
-    <lastmod>2021-09-07T11:03:56-07:00</lastmod>
+    <lastmod>2021-09-07T13:49:54-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://v0tools.stev0.me/commands/winrshell/</loc>
-    <lastmod>2021-09-07T11:03:56-07:00</lastmod>
+    <lastmod>2021-09-07T13:49:54-07:00</lastmod>
   </url>
   
   <url>
@@ -29,12 +29,17 @@
   
   <url>
     <loc>https://v0tools.stev0.me/commands/v0serv/</loc>
-    <lastmod>2021-09-07T11:03:56-07:00</lastmod>
+    <lastmod>2021-09-07T13:49:54-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://v0tools.stev0.me/commands/v0upload/</loc>
-    <lastmod>2021-09-07T11:03:56-07:00</lastmod>
+    <lastmod>2021-09-07T13:49:54-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://v0tools.stev0.me/sys_prerequisites/arch/</loc>
+    <lastmod>2021-09-07T13:49:54-07:00</lastmod>
   </url>
   
   <url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>https://v0tools.stev0.me/</loc>
-    <lastmod>2021-09-07T12:19:04-07:00</lastmod>
+    <lastmod>2021-09-07T13:49:54-07:00</lastmod>
   </url>
   
   <url>
@@ -70,6 +75,16 @@
   <url>
     <loc>https://v0tools.stev0.me/commands/php_search_vuln/</loc>
     <lastmod>2021-09-07T11:03:56-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://v0tools.stev0.me/sys_prerequisites/fedora/</loc>
+    <lastmod>2021-09-07T13:49:54-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://v0tools.stev0.me/sys_prerequisites/debian/</loc>
+    <lastmod>2021-09-07T13:49:54-07:00</lastmod>
   </url>
   
   <url>
@@ -84,22 +99,7 @@
   
   <url>
     <loc>https://v0tools.stev0.me/changelog/</loc>
-    <lastmod>2021-09-07T12:19:04-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://v0tools.stev0.me/sys_prerequisites/arch/</loc>
-    <lastmod>2021-09-07T11:03:56-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://v0tools.stev0.me/sys_prerequisites/debian/</loc>
-    <lastmod>2021-09-07T11:03:56-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://v0tools.stev0.me/sys_prerequisites/fedora/</loc>
-    <lastmod>2021-09-07T11:03:56-07:00</lastmod>
+    <lastmod>2021-09-07T12:42:45-07:00</lastmod>
   </url>
   
   <url>

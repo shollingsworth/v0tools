@@ -35,14 +35,33 @@ class Pkg(object):
     DIST_ARCH = "arch"
     """Distro fixed string."""
 
-    PKG_RH = "sudo yum -y install"
-    """Distro package prefix."""
-
-    PKG_ARCH = "sudo pacman -S"
-    """Distro package prefix."""
-
-    PKG_DEB = "sudo apt install"
-    """Distro package prefix."""
+    MAP = {
+        DIST_DEB: {
+            "pkg": "sudo apt install",
+            "desc": "Ubuntu / Debian based OS's",
+            "prereq": [
+                "python3-pip",
+            ],
+        },
+        DIST_ARCH: {
+            "pkg": "sudo pacman -S",
+            "desc": "Arch Linux",
+            "prereq": [
+                "python-pip",
+            ],
+        },
+        DIST_RH: {
+            "pkg": "sudo yum -y install",
+            "desc": "RHEL/CentOS/Fedora",
+            "prereq": [
+                "python3-pip",
+                "python3-devel",
+                "gcc",
+                "git",
+            ],
+        },
+    }
+    """Distro Attributes."""
 
     def __init__(self, name: str, testing=False):
         """Initialize Pkg"""
@@ -91,21 +110,12 @@ class Pkg(object):
         return self
 
     @property
-    def dist_map(self):
-        """Distribution value map."""
+    def map(self):
+        """Dist Value map."""
         return {
             self.DIST_RH: self.rh,
-            self.DIST_DEB: self.deb,
             self.DIST_ARCH: self.arch,
-        }
-
-    @property
-    def pkg_prefix(self):
-        """Package prefix map."""
-        return {
-            self.DIST_RH: self.PKG_RH,
-            self.DIST_DEB: self.PKG_DEB,
-            self.DIST_ARCH: self.PKG_ARCH,
+            self.DIST_DEB: self.deb,
         }
 
     def instruction(self, override=None):
@@ -119,8 +129,8 @@ class Pkg(object):
         if len(txt.splitlines()) > 1:
             return txt
         else:
-            pmanager, pkg = self.dists[key]
-            return f"{pmanager} {pkg}"
+            pmanager = self.MAP[key]["pkg"]
+            return f"{pmanager} {txt}"
 
     @property
     def dist(self):
@@ -131,11 +141,11 @@ class Pkg(object):
             for i in fc.splitlines()
             if i.strip()
         }
-        retval = os_info.get("ID_LIKE", os_info.get("ID"))
-        if not retval:
+        retval = os_info.get("ID_LIKE", os_info.get("ID", ""))
+        if retval not in self.MAP:
             raise RuntimeError(f"Unknown Dist type: {os_info}")
         if "fedora" in retval:
-            return "fedora"
+            return self.DIST_RH
         return retval
 
 
@@ -214,16 +224,18 @@ def get_install_instructions() -> Dict[str, str]:
             inst_helper[i].setdefault("binaries", [])
             for z in binaries:
                 inst_helper[i]["binaries"].append(z)
-            if len(obj.dist_map[i].split()) > 1:
-                inst_helper[i]["customs"].append([obj.name, obj.dist_map[i].strip()])
+
+            val = obj.map[i]
+            if len(val.splitlines()) > 1:
+                inst_helper[i]["customs"].append([obj.name, obj.map[i].strip()])
             else:
-                inst_helper[i]["pkgs"].append(obj.dist_map[i])
+                inst_helper[i]["pkgs"].append(obj.map[i])
 
     for distro, d1 in inst_helper.items():
         pkgs = d1["pkgs"]
         binaries = d1["binaries"]
         obj = d1["object"]  # type: Pkg
-        pkg_prefix = obj.pkg_prefix[distro]
+        pkg_prefix = obj.MAP[distro]["pkg"]
         inst = f'{pkg_prefix} {" ".join(pkgs)}'
         assemble = []
         assemble = [
@@ -235,6 +247,9 @@ def get_install_instructions() -> Dict[str, str]:
             assemble.append(f"# Install {name}")
             assemble.append(cust)
             assemble.append("")
-        instructions[distro] = "\n".join(assemble)
+        _pr_arr = obj.MAP[distro]["prereq"]
+        pr_line = " ".join([pkg_prefix] + _pr_arr)
+        desc = obj.MAP[distro]["desc"]
+        instructions[distro] = [pr_line, desc, "\n".join(assemble)]
 
     return instructions

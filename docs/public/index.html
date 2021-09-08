@@ -17,8 +17,7 @@
 
     <title>v0tools</title>
 
-    <link rel="icon" href="/favicon/favicon-32x32.png" type="image/x-icon">
-
+    
     <script src="/js/darkmode-ce906ea916.min.js"></script>
 
 <link rel="preload" as="font" href="/fonts/Metropolis.woff2" type="font/woff2" crossorigin="anonymous">
@@ -41,7 +40,13 @@
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -72,7 +77,7 @@
         
         <a class="gdoc-header__link" href="https://v0tools.stev0.me">
             <span class="gdoc-brand flex align-center">
-                <img class="gdoc-brand__img" src="/brand.svg" alt="">
+                <img class="gdoc-brand__img" src="/logo.svg" alt="">
                 <span class="gdoc-brand__title">v0tools</span>
             </span>
         </a>
@@ -215,7 +220,7 @@
             
                 <span class="flex">
                     <a href="/sys_prerequisites/" class="gdoc-nav__entry ">
-                        System Install Prerequisites
+                        System Install
                     </a>
                 </span>
             
@@ -242,31 +247,7 @@
             
                 <span class="flex">
                     <a href="/sys_prerequisites/arch/" class="gdoc-nav__entry ">
-                        Arch
-                    </a>
-                </span>
-            
-            
-
-            
-            </li>
-            
-            
-            
-
-            
-            
-            
-            
-            
-            
-
-            <li>
-            
-            
-                <span class="flex">
-                    <a href="/sys_prerequisites/debian/" class="gdoc-nav__entry ">
-                        Debian
+                        Arch Linux
                     </a>
                 </span>
             
@@ -290,7 +271,31 @@
             
                 <span class="flex">
                     <a href="/sys_prerequisites/fedora/" class="gdoc-nav__entry ">
-                        Fedora
+                        RHEL/CentOS/Fedora
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
+                    <a href="/sys_prerequisites/debian/" class="gdoc-nav__entry ">
+                        Ubuntu / Debian based OS&#39;s
                     </a>
                 </span>
             
@@ -703,37 +708,6 @@
 
             
             <span class="flex">
-                <svg class="icon gdoc_notification"><use xlink:href="#gdoc_notification"></use></svg>
-                <a href="/"
-                    class="gdoc-nav__entry ">
-                    News
-                </a>
-            </span>
-            
-        
-
-        
-    </li>
-
-
-    
-    
-
-    <li>
-        
-        
-            
-            
-            
-            
-            
-            
-            
-            
-            
-
-            
-            <span class="flex">
                 <svg class="icon gdoc_download"><use xlink:href="#gdoc_download"></use></svg>
                 <a href="https://github.com/shollingsworth/v0tools/releases"
                     class="gdoc-nav__entry ">
@@ -835,7 +809,7 @@
 
 
   <div class="gdoc-toc gdoc-toc__level--3"><nav id="TableOfContents"><ul>
-        <li><a href="#installation--quickstart">Installation / Quickstart</a></li>
+        <li><a href="#quickstart--install">Quickstart / Install</a></li>
         <li><a href="#api">Api</a></li>
         <li><a href="#toc">Toc</a></li>
       </ul></nav><hr></div>
@@ -844,12 +818,98 @@
 <strong>This package is for those participating in hacking CTFs and want some tools to help with some of the more tedious tasks.</strong></p>
 <p><strong>Enjoy!</strong></p>
 <p><strong>Pull requests welcome. :)</strong></p>
-<h2 id="installation--quickstart">Installation / Quickstart</h2>
-<blockquote>
-<p><strong>To install this package from <a class="gdoc-markdown__link" href="https://pypi.org/project/v0tools/">pypy</a> run the following command.</strong></p>
-</blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pip3 install v0tools
-</code></pre></div><h2 id="api">Api</h2>
+<h2 id="quickstart--install">Quickstart / Install</h2>
+<p>
+<div class="gdoc-expand">
+  <label class="gdoc-expand__head flex justify-between" for="9f35961a-1">
+    <span>Arch Linux</span>
+    <span>...</span>
+  </label>
+  <input id="9f35961a-1" type="checkbox" class="gdoc-expand__control hidden" />
+  <div class="gdoc-markdown--nested gdoc-expand__content">
+    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Python / Package Pre-reqs</span>
+sudo pacman -S python-pip
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey</span>
+sudo pacman -S fzf konsole socat rlwrap ffmpeg nmap metasploit screenkey
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># install pip package</span>
+pip3 install v0tools
+</code></pre></div>
+  </div>
+</div>
+
+
+<div class="gdoc-expand">
+  <label class="gdoc-expand__head flex justify-between" for="15790963-2">
+    <span>Ubuntu / Debian based OS&#39;s</span>
+    <span>...</span>
+  </label>
+  <input id="15790963-2" type="checkbox" class="gdoc-expand__control hidden" />
+  <div class="gdoc-markdown--nested gdoc-expand__content">
+    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Python / Package Pre-reqs</span>
+sudo apt install python3-pip
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey</span>
+sudo apt install fzf konsole socat rlwrap ffmpeg ncat screenkey
+
+<span class="c1"># Install msfvenom</span>
+curl https://apt.metasploit.com/metasploit-framework.gpg.key <span class="p">|</span> apt-key add -
+<span class="nb">echo</span> deb http://apt.metasploit.com buster main &gt;&gt; /etc/apt/sources.list
+apt update
+apt install -y metasploit-framework
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># install pip package</span>
+pip3 install v0tools
+</code></pre></div>
+  </div>
+</div>
+
+
+<div class="gdoc-expand">
+  <label class="gdoc-expand__head flex justify-between" for="f5c3b7b8-3">
+    <span>RHEL/CentOS/Fedora</span>
+    <span>...</span>
+  </label>
+  <input id="f5c3b7b8-3" type="checkbox" class="gdoc-expand__control hidden" />
+  <div class="gdoc-markdown--nested gdoc-expand__content">
+    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Python / Package Pre-reqs</span>
+sudo yum -y install python3-pip python3-devel gcc git
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey</span>
+sudo yum -y install konsole socat nmap-ncat screenkey
+
+<span class="c1"># Install fzf</span>
+git clone --depth <span class="m">1</span> https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+<span class="nb">source</span> ~/.bashrc
+
+<span class="c1"># Install rlwrap</span>
+sudo yum -y group install <span class="s2">&#34;Development Tools&#34;</span>
+sudo yum -y install readline-devel
+git clone https://github.com/hanslub42/rlwrap.git
+<span class="nb">cd</span> rlwrap
+autoreconf --install
+./configure
+make
+sudo make install
+
+<span class="c1"># Install ffmpeg</span>
+sudo yum -y install epel-release
+sudo yum -y localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+sudo yum -y install ffmpeg ffmpeg-devel
+
+<span class="c1"># Install msfvenom</span>
+curl https://apt.metasploit.com/metasploit-framework.gpg.key &gt; /tmp/msf.asc
+rpm --import /tmp/msf.asc
+sudo yum -y install yum-utils
+sudo yum-config-manager --add-repo<span class="o">=</span>https://rpm.metasploit.com/
+sudo yum -y install metasploit-framework.x86_64
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># install pip package</span>
+pip3 install v0tools
+</code></pre></div>
+  </div>
+</div>
+</p>
+<h2 id="api">Api</h2>
 <blockquote>
 <p><strong>API Documentation can be found <a class="gdoc-markdown__link" href="https://v0tools.stev0.me/api">here</a></strong></p>
 </blockquote>
@@ -881,7 +941,7 @@
       <li>
       
         <span>
-          <a href="/sys_prerequisites/" class="gdoc-toc__entry">System Install Prerequisites:</a> System Install Prerequisites
+          <a href="/sys_prerequisites/" class="gdoc-toc__entry">System Install:</a> OS Specific Install Procedures
         </span>
       
 
@@ -895,7 +955,7 @@
       <li>
       
         <span>
-          <a href="/sys_prerequisites/arch/" class="gdoc-toc__entry">Arch</a>
+          <a href="/sys_prerequisites/arch/" class="gdoc-toc__entry">Arch Linux</a>
         </span>
       
 
@@ -908,7 +968,7 @@
       <li>
       
         <span>
-          <a href="/sys_prerequisites/debian/" class="gdoc-toc__entry">Debian</a>
+          <a href="/sys_prerequisites/fedora/" class="gdoc-toc__entry">RHEL/CentOS/Fedora</a>
         </span>
       
 
@@ -921,7 +981,7 @@
       <li>
       
         <span>
-          <a href="/sys_prerequisites/fedora/" class="gdoc-toc__entry">Fedora</a>
+          <a href="/sys_prerequisites/debian/" class="gdoc-toc__entry">Ubuntu / Debian based OS&#39;s</a>
         </span>
       
 

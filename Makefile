@@ -67,6 +67,8 @@ clean:
 	find -type d -name __pycache__ -delete -print
 
 server:
+	rm -rfv $(docs)/public
+	mkdir -p $(docs)/public
 	bash -c "cd $(docs); hugo server"
 
 hugo_deploy: documentation

@@ -9,7 +9,7 @@ weight: 20
 
 > **HTTP server that accepts PUT requests from remotes.**
 
-{{< tabs "9e48072b0ee29e699173479724cb3f20" >}}
+{{< tabs "bdf4fe8a576a38a2e221b4de8efc28c8" >}}
 {{< tab "Screencast" >}}
 <div class="video-container">
 <video controls autoplay="true" loop="true">
@@ -32,7 +32,7 @@ optional arguments:
   --interface INTERFACE, -i INTERFACE
                         network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear
   --ipv {4,6}           IP Version
-  -p PORT, --port PORT  Directory or file path.
+  -p PORT, --port PORT  port number, or default random port in range:1025-65535.
 ```
 
 {{< /tab >}}

@@ -9,7 +9,7 @@ weight: 10
 
 > **Linux Reverse Shell stager.**
 
-{{< tabs "6d412b22cf1df06e0312f6c5730d31d1" >}}
+{{< tabs "c245ab2fa3cd9bdf959b6b1e64e30b37" >}}
 {{< tab "Screencast" >}}
 <div class="video-container">
 <video controls autoplay="true" loop="true">
@@ -29,7 +29,7 @@ optional arguments:
   --interface INTERFACE, -i INTERFACE
                         network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear
   --ipv {4,6}           IP Version
-  -p PORT, --port PORT  Directory or file path.
+  -p PORT, --port PORT  port number, or default random port in range:1025-65535.
   --rshell RSHELL, -s RSHELL
                         Reverse shell type nc,socat
   --list, -l            List reverse shell types

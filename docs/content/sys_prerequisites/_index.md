@@ -1,11 +1,10 @@
 ---
-description: System Install Prerequisites
+description: OS Specific Install Procedures
 geekdocAlign: left
-geekdocDescription: System Install Prerequisites
-title: System Install Prerequisites
+geekdocDescription: OS Specific Install Procedures
+title: System Install
 weight: 5
 
 ---
 
-## System Install Prerequisites
 {{< toc-tree >}}

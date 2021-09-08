@@ -47,7 +47,7 @@ def get_changlog():
         encoding="utf-8",
     ).splitlines()
     tags = sorted(tags, key=_sort_tags)[::-1]
-    tags.insert(0, "HEAD")
+    # tags.insert(0, "HEAD")
     content = []
     url = get_repo_url()
     for i in range(len(tags)):

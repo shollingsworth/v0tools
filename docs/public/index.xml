@@ -16,7 +16,7 @@
       
       <guid>https://v0tools.stev0.me/commands/linrshell/</guid>
       <description>Linux Reverse Shell stager.
- Screencast     Help  usage: linrshell.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] [--rshell RSHELL] [--list] Linux Reverse Shell stager. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT Directory or file path. --rshell RSHELL, -s RSHELL Reverse shell type nc,socat --list, -l List reverse shell types   Source  #!</description>
+ Screencast     Help  usage: linrshell.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] [--rshell RSHELL] [--list] Linux Reverse Shell stager. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT port number, or default random port in range:1025-65535.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       
       <guid>https://v0tools.stev0.me/commands/winrshell/</guid>
       <description>Windows Reverse Shell stager.
- Screencast     Help  usage: winrshell.py [-h] [-p PORT] [--interface INTERFACE] [--ipv {4,6}] [--rshell RSHELL] [--list] Windows Reverse Shell stager. optional arguments: -h, --help show this help message and exit -p PORT, --port PORT Directory or file path. --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version --rshell RSHELL, -s RSHELL Reverse shell type psh,conpty --list, -l List reverse shell types   Source  #!</description>
+ Screencast     Help  usage: winrshell.py [-h] [-p PORT] [--interface INTERFACE] [--ipv {4,6}] [--rshell RSHELL] [--list] Windows Reverse Shell stager. optional arguments: -h, --help show this help message and exit -p PORT, --port PORT port number, or default random port in range:1025-65535. --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version --rshell RSHELL, -s RSHELL Reverse shell type psh,conpty --list, -l List reverse shell types   Source  #!</description>
     </item>
     
     <item>
@@ -46,7 +46,7 @@
       
       <guid>https://v0tools.stev0.me/commands/v0serv/</guid>
       <description>HTTP Serve a directory, or serve a single isolated file.
- Screencast     Help  usage: v0serv.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] [-d {none,certutil,ps-download,ps-exec}] path HTTP Serve a directory, or serve a single isolated file. positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT Directory or file path.</description>
+ Screencast     Help  usage: v0serv.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] [-d {none,certutil,ps-download,ps-exec}] path HTTP Serve a directory, or serve a single isolated file. positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT port number, or default random port in range:1025-65535.</description>
     </item>
     
     <item>
@@ -56,7 +56,16 @@
       
       <guid>https://v0tools.stev0.me/commands/v0upload/</guid>
       <description>HTTP server that accepts PUT requests from remotes.
- Screencast     Help  usage: v0upload.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] path HTTP server that accepts PUT requests from remotes. positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT Directory or file path.</description>
+ Screencast     Help  usage: v0upload.py [-h] [--interface INTERFACE] [--ipv {4,6}] [-p PORT] path HTTP server that accepts PUT requests from remotes. positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --interface INTERFACE, -i INTERFACE network interface: i.e. tun0, eth0, if undefined, an fzf prompt will appear --ipv {4,6} IP Version -p PORT, --port PORT port number, or default random port in range:1025-65535.</description>
+    </item>
+    
+    <item>
+      <title>Arch Linux</title>
+      <link>https://v0tools.stev0.me/sys_prerequisites/arch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/sys_prerequisites/arch/</guid>
+      <description># Python / Package Pre-reqs sudo pacman -S python-pip # Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo pacman -S fzf konsole socat rlwrap ffmpeg nmap metasploit screenkey # install pip package pip3 install v0tools </description>
     </item>
     
     <item>
@@ -112,6 +121,24 @@ Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git
     </item>
     
     <item>
+      <title>RHEL/CentOS/Fedora</title>
+      <link>https://v0tools.stev0.me/sys_prerequisites/fedora/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/sys_prerequisites/fedora/</guid>
+      <description># Python / Package Pre-reqs sudo yum -y install python3-pip python3-devel gcc git # Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo yum -y install konsole socat nmap-ncat screenkey # Install fzf git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install source ~/.bashrc # Install rlwrap sudo yum -y group install &amp;#34;Development Tools&amp;#34; sudo yum -y install readline-devel git clone https://github.com/hanslub42/rlwrap.git cd rlwrap autoreconf --install ./configure make sudo make install # Install ffmpeg sudo yum -y install epel-release sudo yum -y localinstall --nogpgcheck https://download1.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu / Debian based OS&#39;s</title>
+      <link>https://v0tools.stev0.me/sys_prerequisites/debian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/sys_prerequisites/debian/</guid>
+      <description># Python / Package Pre-reqs sudo apt install python3-pip # Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo apt install fzf konsole socat rlwrap ffmpeg ncat screenkey # Install msfvenom curl https://apt.metasploit.com/metasploit-framework.gpg.key | apt-key add - echo deb http://apt.metasploit.com buster main &amp;gt;&amp;gt; /etc/apt/sources.list apt update apt install -y metasploit-framework # install pip package pip3 install v0tools </description>
+    </item>
+    
+    <item>
       <title>unicodes.py</title>
       <link>https://v0tools.stev0.me/commands/unicodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -119,33 +146,6 @@ Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git
       <guid>https://v0tools.stev0.me/commands/unicodes/</guid>
       <description>print unicode values and associated information to stdout.
  Screencast     Help  usage: unicodes.py [-h] [-f [FILTER [FILTER ...]]] print unicode values and associated information to stdout. example: unicodes.py | fzf optional arguments: -h, --help show this help message and exit -f [FILTER [FILTER ...]], --filter [FILTER [FILTER ...]] Filter string   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;print unicode values and associated information to stdout.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://v0tools.stev0.me/sys_prerequisites/arch/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://v0tools.stev0.me/sys_prerequisites/arch/</guid>
-      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo pacman -S fzf konsole socat rlwrap ffmpeg nmap metasploit screenkey </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://v0tools.stev0.me/sys_prerequisites/debian/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://v0tools.stev0.me/sys_prerequisites/debian/</guid>
-      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo apt install fzf konsole socat rlwrap ffmpeg ncat screenkey # Install msfvenom curl https://apt.metasploit.com/metasploit-framework.gpg.key | apt-key add - echo deb http://apt.metasploit.com buster main &amp;gt;&amp;gt; /etc/apt/sources.list apt update apt install -y metasploit-framework </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://v0tools.stev0.me/sys_prerequisites/fedora/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://v0tools.stev0.me/sys_prerequisites/fedora/</guid>
-      <description># Provides fzf, konsole, socat, rlwrap, ffmpeg, nc, msfvenom, msfconsole, screenkey sudo yum -y install konsole socat nmap-ncat screenkey # Install fzf git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install source ~/.bashrc # Install rlwrap sudo yum -y group install &amp;#34;Development Tools&amp;#34; sudo yum -y install readline-devel git clone https://github.com/hanslub42/rlwrap.git cd rlwrap autoreconf --install ./configure make sudo make install # Install ffmpeg sudo yum -y install epel-release sudo yum -y localinstall --nogpgcheck https://download1.</description>
     </item>
     
   </channel>

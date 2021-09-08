@@ -30,6 +30,7 @@ params:
 
   # geekdocRepo: https://github.com/thegeeklab/hugo-geekdoc
   # geekdocEditPath: edit/main/exampleSite/content
+  geekdocLogo: "logo.svg"
 
   geekdocSearch: true
   geekdocSearchShowParent: true

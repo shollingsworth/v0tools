@@ -10,7 +10,6 @@ from v0tools.cli import Cli
 import v0tools_doc
 from v0tools_doc import hugo
 from v0tools_doc.hugo import ShortCode
-import shutil
 import os
 
 ME = Path(__file__).resolve()
@@ -68,9 +67,9 @@ class CliInfo(object):
     @property
     def readme_text(self):
         txt = []
-        docstr = cleandoc(self.module.__doc__)
+        docstr = cleandoc(str(self.module.__doc__))
         if docstr:
-            docstr = [i for i in self.module.__doc__.splitlines() if i.strip()][0]
+            docstr = [i for i in str(self.module.__doc__).splitlines() if i.strip()][0]
 
         docpath = f"{v0tools_doc.SITE_BASE}/commands/{self.script.name}"
         pagelink = f"*[{self.name}]({docpath})*"
@@ -148,8 +147,17 @@ class DocGroup(object):
             msg.append("Bailing... please fix")
             raise SystemExit("\n".join(msg))
 
+    def _sort(self, v: Dict):
+        _, obj = v
+        if "shell" in obj.name:
+            return 0
+        elif obj.name.startswith("v0"):
+            return 1
+        else:
+            return 5
+
     def __iter__(self):
-        for k, obj in self.collection.items():
+        for k, obj in sorted(self.collection.items(), key=self._sort):
             single_line = obj.doc.splitlines()[0]
             yield k, {
                 "url": obj.url,

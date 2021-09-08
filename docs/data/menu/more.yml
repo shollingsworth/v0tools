@@ -1,8 +1,5 @@
 ---
 more:
-  - name: News
-    ref: "/#"
-    icon: "gdoc_notification"
   - name: Releases
     ref: "https://github.com/shollingsworth/v0tools/releases"
     external: true
