@@ -3,7 +3,7 @@ description: Version Control Changelog
 geekdocAlign: left
 geekdocDescription: Version Control Changelog
 title: Changlog
-weight: 150
+weight: 10
 
 ---
 

@@ -4,11 +4,7 @@
     <title>Home on v0tools</title>
     <link>https://v0tools.stev0.me/</link>
     <description>Recent content in Home on v0tools</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://v0tools.stev0.me/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://v0tools.stev0.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linrshell.py</title>
       <link>https://v0tools.stev0.me/commands/linrshell/</link>
@@ -69,6 +65,17 @@
     </item>
     
     <item>
+      <title>binpathsearch.py</title>
+      <link>https://v0tools.stev0.me/commands/binpathsearch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://v0tools.stev0.me/commands/binpathsearch/</guid>
+      <description>Search for executable names in PATH
+Helpful for finding the names of commands you can&amp;rsquo;t remember
+ Screencast     Help  usage: binpathsearch.py [-h] [-f [FILTER ...]] Search for executable names in PATH Helpful for finding the names of commands you can&amp;#39;t remember optional arguments: -h, --help show this help message and exit -f [FILTER ...], --filter [FILTER ...] filter results based on fixed string.   Source  #!</description>
+    </item>
+    
+    <item>
       <title>cmd-not-found.py</title>
       <link>https://v0tools.stev0.me/commands/cmd-not-found/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -117,7 +124,7 @@ Thanks to https://command-not-found.com/ and Ƚukasz Lach https://twitter.com/la
       <guid>https://v0tools.stev0.me/commands/php_search_vuln/</guid>
       <description>Search for vulnerable calls / strings in php code.
 Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git
- Screencast     Help  usage: php_search_vuln.py [-h] [--filter FILTER] [--inc_lines INC_LINES] path Search for vulnerable calls / strings in php code. Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --filter FILTER, -f FILTER i.e. *.php or *.py --inc_lines INC_LINES, -l INC_LINES number of lines to include before / after match   Source  #!</description>
+ Screencast     Help  usage: php_search_vuln.py [-h] [--filter_ext FILTER_EXT] [--inc_lines INC_LINES] path Search for vulnerable calls / strings in php code. Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git positional arguments: path Directory or file path. optional arguments: -h, --help show this help message and exit --filter_ext FILTER_EXT, -f FILTER_EXT i.e. *.php or *.py --inc_lines INC_LINES, -l INC_LINES number of lines to include before / after match   Source  #!</description>
     </item>
     
     <item>
@@ -145,7 +152,7 @@ Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git
       
       <guid>https://v0tools.stev0.me/commands/unicodes/</guid>
       <description>print unicode values and associated information to stdout.
- Screencast     Help  usage: unicodes.py [-h] [-f [FILTER [FILTER ...]]] print unicode values and associated information to stdout. example: unicodes.py | fzf optional arguments: -h, --help show this help message and exit -f [FILTER [FILTER ...]], --filter [FILTER [FILTER ...]] Filter string   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;print unicode values and associated information to stdout.</description>
+ Screencast     Help  usage: unicodes.py [-h] [-f [FILTER ...]] print unicode values and associated information to stdout. example: unicodes.py | fzf optional arguments: -h, --help show this help message and exit -f [FILTER ...], --filter [FILTER ...] filter results based on fixed string.   Source  #!/usr/bin/env python3 # -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34;print unicode values and associated information to stdout.</description>
     </item>
     
   </channel>

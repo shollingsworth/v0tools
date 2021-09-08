@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Unit test helpers."""
+from types import ModuleType
+import contextlib
+import sys
+from io import StringIO
+from pathlib import Path
+from v0tools.cli import Cli
 import subprocess
 import unittest
+
+BASE = Path(__file__).parent.parent.parent.resolve()
+"""Base Path."""
+sys.path.append(str(BASE.joinpath("bin")))
 
 # Stolen from https://raw.githubusercontent.com/lacostej/unity3d-bash-completion/master/lib/completion.py
 # inspired from http://stackoverflow.com/questions/9137245/unit-test-for-bash-completion-script
@@ -95,3 +105,82 @@ class BashCompletionTest(unittest.TestCase):
         stdout, _ = Completion().run(completion_file, program, command)
         should = expected + "\n"
         self.assertEqual(stdout, should.encode())
+
+
+class CliRun(object):
+    """Run the program and capture the output."""
+
+    def __init__(self, script_name: str):
+        """Initialize CliRun object."""
+        name = script_name.rstrip(".py")
+        self.mod = __import__(name)
+        """cli module."""
+        self.cli = self.mod.cli  # type: Cli
+        """cli object."""
+
+    def run(self, inp_args: str):
+        """Run with no testing."""
+        with StringIO() as buf, contextlib.redirect_stdout(buf):
+            args = self.cli.get_parse(inp_args)
+            self.cli.run_nocatch(args)
+            output = buf.getvalue()
+        return output
+
+
+class CliTest(unittest.TestCase):
+    """Cli Test Class."""
+
+    SCRIPT_NAME = ""
+    """Base script name."""
+
+    def init(self):
+        """Setup module and variables."""
+        if not self.SCRIPT_NAME:
+            raise RuntimeError("Class SCRIPT_NAME not set")
+        name = self.SCRIPT_NAME.rstrip(".py")
+        self.mod = __import__(name)
+        """cli module."""
+        self.cli = self.mod.cli  # type: Cli
+        """cli object."""
+
+    def run_cli(self, inp_args: str):
+        """Run with no testing."""
+        with StringIO() as buf, contextlib.redirect_stdout(buf):
+            args = self.cli.get_parse(inp_args)
+            self.cli.run_nocatch(args)
+            output = buf.getvalue()
+        return output
+
+    def match_txt_in_output(self, inp_args: str, match_str: str):
+        """Match string in output."""
+        output = self.run_cli(inp_args)
+        self.assertIn(match_str, output)
+
+    def match_lines_in_output(self, inp_args: str, match_lines: list):
+        """Match string in output."""
+        output = self.run_cli(inp_args)
+        lines = output.splitlines()
+        matches = [i for i in match_lines if i in lines]
+        self.assertEqual(len(matches), len(match_lines))
+
+    def match_zero_exit_code(self, inp_args: str, match_str: str):
+        """Match string in zero exit coded program."""
+        with StringIO() as buf, contextlib.redirect_stdout(buf):
+            with self.assertRaises(SystemExit) as err:
+                args = self.cli.get_parse(inp_args)
+                print(args)
+            self.assertEqual(err.exception.code, 0)  # exits ok
+            output = buf.getvalue()
+        self.assertIn(match_str, output)
+
+    def exception_raises(self, inp_args: str, exception):
+        """Test if certain exception raised."""
+        with StringIO() as buf, contextlib.redirect_stdout(buf):
+            args = self.cli.get_parse(inp_args)
+            self.assertRaises(exception, self.cli.run_nocatch, args)
+
+    def exception_raises_with_regex(self, inp_args: str, exception, regex: str):
+        """Checked raised exception and regex match."""
+        args = self.cli.get_parse(inp_args)
+        with StringIO() as buf, contextlib.redirect_stdout(buf):
+            self.assertRaisesRegex(exception, regex, self.cli.run_nocatch, args)

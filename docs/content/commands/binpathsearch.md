@@ -1,3 +1,49 @@
+---
+description: 'Search for executable names in PATH
+
+
+  Helpful for finding the names of commands you can''t remember'
+geekdocAlign: left
+geekdocDescription: 'Search for executable names in PATH
+
+
+  Helpful for finding the names of commands you can''t remember'
+title: binpathsearch.py
+weight: 99
+
+---
+
+> **Search for executable names in PATH**
+> 
+> **Helpful for finding the names of commands you can't remember**
+
+{{< tabs "9f56a86668b170115249c348e4b8604c" >}}
+{{< tab "Screencast" >}}
+<div class="video-container">
+<video controls autoplay="true" loop="true">
+<source src="/cli/binpathsearch.py.webm" type="video/webm">
+</video>
+</div>
+{{< /tab >}}
+{{< tab "Help" >}}
+
+```bash
+usage: binpathsearch.py [-h] [-f [FILTER ...]]
+
+Search for executable names in PATH
+
+Helpful for finding the names of commands you can't remember
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f [FILTER ...], --filter [FILTER ...]
+                        filter results based on fixed string.
+```
+
+{{< /tab >}}
+{{< tab "Source" >}}
+
+```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -47,3 +93,8 @@ if __name__ == "__main__":
     args = cli.get_parse()
     # args = cli.get_parse(["-f", "crack"])
     cli.run(args)
+
+```
+
+{{< /tab >}}
+{{< /tabs >}}

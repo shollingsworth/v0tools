@@ -14,29 +14,20 @@ from pathlib import Path
 from v0tools.lib import util
 import requests
 import time
-
-BASE = pathlib.Path(__file__).parent.parent.resolve()
-
-sys.path.append(str(BASE.joinpath("bin")))
-name = "v0upload"
-cli_mod = __import__(name)
-cli = cli_mod.cli  # type: Cli
+from v0tools.tests import CliTest
 
 
-def _bgserv(args):
-    cli.run_nocatch(args)
+class Test_v0serv(CliTest):
+    SCRIPT_NAME = "v0upload.py"
 
+    def setUp(self):
+        self.init()
 
-class Test_v0serv(unittest.TestCase):
+    def _bgserv(self, args):
+        self.cli.run_nocatch(args)
+
     def test_help(self):
-        inp_args = "--help"
-        with StringIO() as buf, contextlib.redirect_stdout(buf):
-            with self.assertRaises(SystemExit) as err:
-                args = cli.get_parse(inp_args)
-                print(args)
-            self.assertEqual(err.exception.code, 0)  # exits ok
-            output = buf.getvalue()
-        self.assertIn("--help", output)
+        self.match_zero_exit_code("--help", "--help")
 
     def test_serv_dir(self):
         r_files = {f"file_{idx}.txt": util.randstr(20) for idx in range(50)}
@@ -52,8 +43,8 @@ class Test_v0serv(unittest.TestCase):
                 vfiles.append(fobj)
                 fobj.write_text(content)
             # start upload server
-            pass_args = cli.get_parse(f"-p {port} -i lo {upload_dir}")
-            t = threading.Thread(target=_bgserv, args=(pass_args,))
+            pass_args = self.cli.get_parse(f"-p {port} -i lo {upload_dir}")
+            t = threading.Thread(target=self._bgserv, args=(pass_args,))
             t.daemon = True
             t.start()
             time.sleep(3)

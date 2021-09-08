@@ -45,21 +45,21 @@ def main():
     obj = cli.DocGroup()
     dval = dict(obj)
 
-    config_dir, config_file = _root_path("configuration")
+    _, config_file = _root_path("configuration")
     inst_dir, inst_file = _root_path("sys_prerequisites")
-    change_dir, change_file = _root_path("changelog")
-    about_dir, about_file = _root_path("about")
+    _, change_file = _root_path("changelog")
+    _, about_file = _root_path("about")
 
     with about_file.open("w") as fileh:
         page = hugo.Page("About", "About Page")
-        page.weight = 100
+        page.weight = 1
         page.body = ABOUT
         fileh.write(page.content)
 
     with change_file.open("w") as fileh:
         output = []
         page = hugo.Page("Changlog", "Version Control Changelog")
-        page.weight = 150
+        page.weight = 10
         output.append(ShortCode.expand("{{< toc >}}", "TOC"))
         output.append(changelog.get_changlog())
         page.body = "\n".join(output)
@@ -73,6 +73,7 @@ def main():
             "OS Specific Install Procedures",
         )
         page.weight = 5
+        page.geekdocCollapseSection = True
         page.body = "\n".join(output)
         fileh.write(page.content)
 

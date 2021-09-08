@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://v0tools.stev0.me/about/</loc>
+    <lastmod>2021-09-07T12:19:04-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://v0tools.stev0.me/configuration/</loc>
     <lastmod>2021-09-07T17:29:45-07:00</lastmod>
   </url>
@@ -10,6 +15,11 @@
   <url>
     <loc>https://v0tools.stev0.me/sys_prerequisites/</loc>
     <lastmod>2021-09-07T17:29:45-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://v0tools.stev0.me/changelog/</loc>
+    <lastmod>2021-09-08T06:41:16-07:00</lastmod>
   </url>
   
   <url>
@@ -40,6 +50,10 @@
   <url>
     <loc>https://v0tools.stev0.me/sys_prerequisites/arch/</loc>
     <lastmod>2021-09-07T17:29:45-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://v0tools.stev0.me/commands/binpathsearch/</loc>
   </url>
   
   <url>
@@ -90,16 +104,6 @@
   <url>
     <loc>https://v0tools.stev0.me/commands/unicodes/</loc>
     <lastmod>2021-09-07T11:03:56-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://v0tools.stev0.me/about/</loc>
-    <lastmod>2021-09-07T12:19:04-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://v0tools.stev0.me/changelog/</loc>
-    <lastmod>2021-09-08T06:41:16-07:00</lastmod>
   </url>
   
   <url>

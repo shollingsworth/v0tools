@@ -10,11 +10,13 @@
 
 
 
-    <meta name="description" content="HTTP Serve a directory, or serve a single isolated file.">
+    <meta name="description" content="Search for executable names in PATH
+
+Helpful for finding the names of commands you can&#39;t remember">
 
 
 
-    <title>v0serv.py | v0tools</title>
+    <title>binpathsearch.py | v0tools</title>
 
     
     <script src="/js/darkmode-ce906ea916.min.js"></script>
@@ -492,7 +494,7 @@
             
             
                 <span class="flex">
-                    <a href="/commands/v0serv/" class="gdoc-nav__entry is-active">
+                    <a href="/commands/v0serv/" class="gdoc-nav__entry ">
                         v0serv.py
                     </a>
                 </span>
@@ -542,7 +544,7 @@
             
             
                 <span class="flex">
-                    <a href="/commands/binpathsearch/" class="gdoc-nav__entry ">
+                    <a href="/commands/binpathsearch/" class="gdoc-nav__entry is-active">
                         binpathsearch.py
                     </a>
                 </span>
@@ -839,7 +841,7 @@
         
     
     
-        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Home</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/commands/' href='/commands/'><span itemprop='name'>Commands</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>v0serv.py</span><meta itemprop='position' content='3' /></li>
+        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Home</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/commands/' href='/commands/'><span itemprop='name'>Commands</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>binpathsearch.py</span><meta itemprop='position' content='3' /></li>
     
 
     
@@ -854,9 +856,10 @@
 
 
     <article class="gdoc-markdown gdoc-markdown__align--left">
-        <h1>v0serv.py</h1>
+        <h1>binpathsearch.py</h1>
         <blockquote>
-<p><strong>HTTP Serve a directory, or serve a single isolated file.</strong></p>
+<p><strong>Search for executable names in PATH</strong></p>
+<p><strong>Helpful for finding the names of commands you can&rsquo;t remember</strong></p>
 </blockquote>
 
 
@@ -864,87 +867,93 @@
 
 <div class="gdoc-tabs">
   
-    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-35a62f98c74384f347e959d09d95c187" id="tabs-35a62f98c74384f347e959d09d95c187-0"
+    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-9f56a86668b170115249c348e4b8604c" id="tabs-9f56a86668b170115249c348e4b8604c-0"
       checked="checked"  />
-    <label for="tabs-35a62f98c74384f347e959d09d95c187-0" class="gdoc-tabs__label">
+    <label for="tabs-9f56a86668b170115249c348e4b8604c-0" class="gdoc-tabs__label">
       Screencast
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="video-container">
 <video controls autoplay="true" loop="true">
-<source src="/cli/v0serv.py.webm" type="video/webm">
+<source src="/cli/binpathsearch.py.webm" type="video/webm">
 </video>
 </div>
 
     </div>
   
-    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-35a62f98c74384f347e959d09d95c187" id="tabs-35a62f98c74384f347e959d09d95c187-1"
+    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-9f56a86668b170115249c348e4b8604c" id="tabs-9f56a86668b170115249c348e4b8604c-1"
        />
-    <label for="tabs-35a62f98c74384f347e959d09d95c187-1" class="gdoc-tabs__label">
+    <label for="tabs-9f56a86668b170115249c348e4b8604c-1" class="gdoc-tabs__label">
       Help
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">usage: v0serv.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--interface INTERFACE<span class="o">]</span> <span class="o">[</span>--ipv <span class="o">{</span>4,6<span class="o">}]</span> <span class="o">[</span>-p PORT<span class="o">]</span> <span class="o">[</span>-d <span class="o">{</span>none,certutil,ps-download,ps-exec<span class="o">}]</span> path
+      <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">usage: binpathsearch.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-f <span class="o">[</span>FILTER ...<span class="o">]]</span>
 
-HTTP Serve a directory, or serve a single isolated file.
+Search <span class="k">for</span> executable names in PATH
 
-positional arguments:
-  path                  Directory or file path.
+Helpful <span class="k">for</span> finding the names of commands you can<span class="err">&#39;</span>t remember
 
 optional arguments:
   -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
-  --interface INTERFACE, -i INTERFACE
-                        network interface: i.e. tun0, eth0, <span class="k">if</span> undefined, an fzf prompt will appear
-  --ipv <span class="o">{</span>4,6<span class="o">}</span>           IP Version
-  -p PORT, --port PORT  port number, or default random port in range:1025-65535.
-  -d <span class="o">{</span>none,certutil,ps-download,ps-exec<span class="o">}</span>, --display <span class="o">{</span>none,certutil,ps-download,ps-exec<span class="o">}</span>
-                        display <span class="nb">type</span>
+  -f <span class="o">[</span>FILTER ...<span class="o">]</span>, --filter <span class="o">[</span>FILTER ...<span class="o">]</span>
+                        filter results based on fixed string.
 </code></pre></div>
     </div>
   
-    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-35a62f98c74384f347e959d09d95c187" id="tabs-35a62f98c74384f347e959d09d95c187-2"
+    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-9f56a86668b170115249c348e4b8604c" id="tabs-9f56a86668b170115249c348e4b8604c-2"
        />
-    <label for="tabs-35a62f98c74384f347e959d09d95c187-2" class="gdoc-tabs__label">
+    <label for="tabs-9f56a86668b170115249c348e4b8604c-2" class="gdoc-tabs__label">
       Source
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
       <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python3</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="s2">&#34;&#34;&#34;HTTP Serve a directory, or serve a single isolated file.&#34;&#34;&#34;</span>
-<span class="kn">from</span> <span class="nn">v0tools</span> <span class="kn">import</span> <span class="n">cli</span>
-<span class="kn">from</span> <span class="nn">v0tools.servers</span> <span class="kn">import</span> <span class="n">httpserv</span>
+<span class="s2">&#34;&#34;&#34;
+</span><span class="s2">Search for executable names in PATH
+</span><span class="s2">
+</span><span class="s2">Helpful for finding the names of commands you can&#39;t remember
+</span><span class="s2">&#34;&#34;&#34;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">v0tools.cli</span> <span class="kn">import</span> <span class="n">Cli</span>
 
-<span class="n">cli</span> <span class="o">=</span> <span class="n">cli</span><span class="o">.</span><span class="n">Cli</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
-<span class="n">cli</span><span class="o">.</span><span class="n">add_path</span><span class="p">()</span>
-<span class="n">cli</span><span class="o">.</span><span class="n">add_ipv_interface</span><span class="p">()</span>
-<span class="n">cli</span><span class="o">.</span><span class="n">add_port</span><span class="p">()</span>
+<span class="n">cli</span> <span class="o">=</span> <span class="n">Cli</span><span class="p">()</span>
 <span class="n">parser</span> <span class="o">=</span> <span class="n">cli</span><span class="o">.</span><span class="n">parser</span>
+<span class="n">cli</span><span class="o">.</span><span class="n">add_filter</span><span class="p">()</span>
 
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-    <span class="s2">&#34;-d&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;--display&#34;</span><span class="p">,</span>
-    <span class="n">help</span><span class="o">=</span><span class="s2">&#34;display type&#34;</span><span class="p">,</span>
-    <span class="n">choices</span><span class="o">=</span><span class="n">httpserv</span><span class="o">.</span><span class="n">SERV_PREFIXES</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span>
-    <span class="n">default</span><span class="o">=</span><span class="s2">&#34;none&#34;</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
-<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">vals</span><span class="p">():</span>
+    <span class="n">paths</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&#34;PATH&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;:&#34;</span><span class="p">)</span>
+    <span class="n">dirs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Path</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">]</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
+        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">file</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+                <span class="k">continue</span>
+            <span class="n">_apath</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+            <span class="n">is_exec</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">_apath</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">X_OK</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">is_exec</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">_apath</span><span class="o">.</span><span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">_apath</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">vals</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">_apath</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="s2">&#34;&#34;&#34;Run main function.&#34;&#34;&#34;</span>
-    <span class="n">httpserv</span><span class="o">.</span><span class="n">serve</span><span class="p">(</span>
-        <span class="n">args</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
-        <span class="nb">str</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">port</span><span class="p">),</span>
-        <span class="n">args</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
-        <span class="n">args</span><span class="o">.</span><span class="n">display</span><span class="p">,</span>
-    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">vals</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">filter</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">all</span><span class="p">([</span><span class="n">z</span> <span class="ow">in</span> <span class="n">i</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">filter</span><span class="p">]):</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
 
 <span class="n">cli</span><span class="o">.</span><span class="n">set_entrypoint</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">cli</span><span class="o">.</span><span class="n">get_parse</span><span class="p">()</span>
-    <span class="c1"># args = cli.get_parse(&#34;-i lo ./&#34;)</span>
+    <span class="c1"># args = cli.get_parse([&#34;-f&#34;, &#34;crack&#34;])</span>
     <span class="n">cli</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
 </code></pre></div>

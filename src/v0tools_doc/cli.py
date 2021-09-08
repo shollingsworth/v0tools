@@ -111,6 +111,7 @@ class DocGroup(object):
     def write_content(self):
         with self.command_index.open("w") as fileh:
             obj = hugo.Page("Commands", "CLI Utilities")
+            obj.geekdocCollapseSection = True
             obj.body = "{{< toc-tree >}}"
             fileh.write(obj.content)
 

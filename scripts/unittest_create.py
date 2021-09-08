@@ -42,7 +42,7 @@ def get_cli_template(path: pathlib.Path):
     relpath = path.relative_to(BASE)
     modname = relpath.name.split(".", 1)[0]
     flat = modname.replace("-", "_")
-    template = TEMPLATE_DIR.joinpath("cli.py").read_text()
+    template = TEMPLATE_DIR.joinpath("cli_test.py").read_text()
     return (
         template.replace(f"::relpath::", str(relpath))
         .replace("::modname::", modname)

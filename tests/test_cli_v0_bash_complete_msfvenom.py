@@ -1,32 +1,33 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """UNIT Test for Cli bin/v0complete_msfvenom.py."""
-from v0tools.cli import Cli
-from v0tools import tests
+from v0tools.tests import CliTest, CliRun, BashCompletionTest
 import unittest
 from io import StringIO
-import sys
 import contextlib
-import pathlib
 import tempfile
 
-BASE = pathlib.Path(__file__).parent.parent.resolve()
 
-sys.path.append(str(BASE.joinpath("bin")))
-name = "v0_bash_complete_msfvenom"
-cli_mod = __import__(name)
-cli = cli_mod.cli  # type: Cli
+class Test_v0complete_msfvenom(CliTest):
+    SCRIPT_NAME = "v0_bash_complete_msfvenom.py"
+
+    def setUp(self):
+        self.init()
+
+    def test_help(self):
+        self.match_zero_exit_code("--help", "--help")
 
 
-class Test_v0complete_msfvenom_Completions(tests.BashCompletionTest):
+class Test_v0complete_msfvenom_Completions(BashCompletionTest):
     def setUp(self):
         self.program = "msfvenom"
+        self.clirun = CliRun("v0_bash_complete_msfvenom.py")
 
     def run_test(self, partial, expected):
         with tempfile.NamedTemporaryFile() as fileh:
             with StringIO() as buf, contextlib.redirect_stdout(buf):
-                args = cli.get_parse()
-                cli.run_nocatch(args)
+                args = self.clirun.cli.get_parse()
+                self.clirun.cli.run_nocatch(args)
                 output = buf.getvalue()
                 print(output)
             fileh.write(output.encode())
@@ -52,18 +53,6 @@ class Test_v0complete_msfvenom_Completions(tests.BashCompletionTest):
         partial = "LHOST=127"
         expected = "127.0.0.1"
         self.run_test(partial, expected)
-
-
-class Test_v0complete_msfvenom(unittest.TestCase):
-    def test_help(self):
-        inp_args = "--help"
-        with StringIO() as buf, contextlib.redirect_stdout(buf):
-            with self.assertRaises(SystemExit) as err:
-                args = cli.get_parse(inp_args)
-                print(args)
-            self.assertEqual(err.exception.code, 0)  # exits ok
-            output = buf.getvalue()
-        self.assertIn("--help", output)
 
 
 if __name__ == "__main__":

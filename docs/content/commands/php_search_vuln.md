@@ -17,7 +17,7 @@ weight: 99
 > 
 > **Example Repo: https://github.com/OWASP/Vulnerable-Web-Application.git**
 
-{{< tabs "b663ba94b1fdc41f7a0a389617606e94" >}}
+{{< tabs "0dcba41fafdfab9ca18b874d6477c3bf" >}}
 {{< tab "Screencast" >}}
 <div class="video-container">
 <video controls autoplay="true" loop="true">
@@ -28,7 +28,7 @@ weight: 99
 {{< tab "Help" >}}
 
 ```bash
-usage: php_search_vuln.py [-h] [--filter FILTER] [--inc_lines INC_LINES] path
+usage: php_search_vuln.py [-h] [--filter_ext FILTER_EXT] [--inc_lines INC_LINES] path
 
 Search for vulnerable calls / strings in php code.
 
@@ -39,7 +39,7 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  --filter FILTER, -f FILTER
+  --filter_ext FILTER_EXT, -f FILTER_EXT
                         i.e. *.php or *.py
   --inc_lines INC_LINES, -l INC_LINES
                         number of lines to include before / after match
@@ -80,7 +80,7 @@ parser = cli.parser
 cli.add_path()
 
 parser.add_argument(
-    "--filter",
+    "--filter_ext",
     "-f",
     help="i.e. *.php or *.py",
     default="*.php",
@@ -109,7 +109,7 @@ def main(args):
     """Run main function."""
     files = []
     fcnt = 0
-    for filename in iterfiles(args.path, args.filter):
+    for filename in iterfiles(args.path, args.filter_ext):
         fcnt += 1
         for idx, lines, cstr, url in _check_vuln(filename, args):
             url = green(url) if url else ""

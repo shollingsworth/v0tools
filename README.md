@@ -29,6 +29,9 @@ Full documentation can be found at [https://v0tools.stev0.me](https://v0tools.st
 * *[v0upload.py](https://v0tools.stev0.me/commands/v0upload/)*
     * HTTP server that accepts PUT requests from remotes.
 
+* *[binpathsearch.py](https://v0tools.stev0.me/commands/binpathsearch/)*
+    * Search for executable names in PATH
+
 * *[cmd-not-found.py](https://v0tools.stev0.me/commands/cmd-not-found/)*
     * Print how to install packages on different operating systems
 

@@ -2,12 +2,8 @@
 # -*- coding: utf-8 -*-
 """UNIT Test for Cli bin/v0serv.py."""
 from typing import List
-from v0tools.cli import Cli
+from v0tools.tests import CliTest
 import unittest
-from io import StringIO
-import sys
-import contextlib
-import pathlib
 import threading
 import tempfile
 from pathlib import Path
@@ -15,28 +11,18 @@ from v0tools.lib import util
 import requests
 import time
 
-BASE = pathlib.Path(__file__).parent.parent.resolve()
 
-sys.path.append(str(BASE.joinpath("bin")))
-name = "v0serv"
-cli_mod = __import__(name)
-cli = cli_mod.cli  # type: Cli
+class Test_v0serv(CliTest):
+    SCRIPT_NAME = "v0serv.py"
 
+    def setUp(self):
+        self.init()
 
-def _bgserv(args):
-    cli.run_nocatch(args)
+    def _bgserv(self, args):
+        self.cli.run_nocatch(args)
 
-
-class Test_v0serv(unittest.TestCase):
     def test_help(self):
-        inp_args = "--help"
-        with StringIO() as buf, contextlib.redirect_stdout(buf):
-            with self.assertRaises(SystemExit) as err:
-                args = cli.get_parse(inp_args)
-                print(args)
-            self.assertEqual(err.exception.code, 0)  # exits ok
-            output = buf.getvalue()
-        self.assertIn("--help", output)
+        self.match_zero_exit_code("--help", "--help")
 
     def test_serv_dir(self):
         r_files = {f"file/{idx}/file_{idx}.txt": util.randstr(20) for idx in range(50)}
@@ -50,8 +36,8 @@ class Test_v0serv(unittest.TestCase):
                 fobj.parent.mkdir()
                 vfiles.append(fobj)
                 fobj.write_text(content)
-            pass_args = cli.get_parse(f"-p {port} -i lo {tdir}")
-            t = threading.Thread(target=_bgserv, args=(pass_args,))
+            pass_args = self.cli.get_parse(f"-p {port} -i lo {tdir}")
+            t = threading.Thread(target=self._bgserv, args=(pass_args,))
             t.daemon = True
             t.start()
             time.sleep(3)
@@ -72,8 +58,8 @@ class Test_v0serv(unittest.TestCase):
             tdir = Path(tdir)
             rfile = tdir.joinpath(fn)
             rfile.write_text(rtxt)
-            pass_args = cli.get_parse(f"-p {port} -i lo {rfile}")
-            t = threading.Thread(target=_bgserv, args=(pass_args,))
+            pass_args = self.cli.get_parse(f"-p {port} -i lo {rfile}")
+            t = threading.Thread(target=self._bgserv, args=(pass_args,))
             t.daemon = True
             t.start()
             time.sleep(3)

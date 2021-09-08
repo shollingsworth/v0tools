@@ -43,6 +43,19 @@ class Cli(object):
             type=str,
         )
 
+    def add_filter(self):
+        """filter results based on fixed string."""
+        self.parser.add_argument(
+            "-f",
+            "--filter",
+            nargs="*",
+            help=self.add_filter.__doc__,
+            action="append",
+            type=str,
+            required=False,
+            default=None,
+        )
+
     def add_ipv_interface(self):
         """Add ipv / interface combo."""
         self.parser.add_argument(
@@ -108,6 +121,8 @@ class Cli(object):
             args = self.parser.parse_args()
 
         action_names = [i.dest for i in self.parser._actions]
+        if "filter" in action_names and args.filter:
+            args.filter = [i[0] for i in args.filter]
         if "path" in action_names and args.path:
             args.path = pathlib.Path(args.path).expanduser().resolve()
         if "interface" in action_names and not args.interface:

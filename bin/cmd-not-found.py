@@ -38,8 +38,9 @@ def main(args):
     print(json.dumps(vals, indent=4, separators=(",", " : ")))
 
 
+cli.set_entrypoint(main)
+
 if __name__ == "__main__":
     args = cli.get_parse()
     # args = cli.get_parse("booga")
-    cli.set_entrypoint(main)
     cli.run(args)

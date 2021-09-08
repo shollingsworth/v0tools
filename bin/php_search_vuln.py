@@ -29,7 +29,7 @@ parser = cli.parser
 cli.add_path()
 
 parser.add_argument(
-    "--filter",
+    "--filter_ext",
     "-f",
     help="i.e. *.php or *.py",
     default="*.php",
@@ -58,7 +58,7 @@ def main(args):
     """Run main function."""
     files = []
     fcnt = 0
-    for filename in iterfiles(args.path, args.filter):
+    for filename in iterfiles(args.path, args.filter_ext):
         fcnt += 1
         for idx, lines, cstr, url in _check_vuln(filename, args):
             url = green(url) if url else ""

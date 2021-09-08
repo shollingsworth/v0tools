@@ -191,8 +191,8 @@
             
             
                 <span class="flex">
-                    <a href="/configuration/" class="gdoc-nav__entry ">
-                        Configuration
+                    <a href="/about/" class="gdoc-nav__entry ">
+                        About
                     </a>
                 </span>
             
@@ -217,11 +217,44 @@
             
             
                 <span class="flex">
+                    <a href="/configuration/" class="gdoc-nav__entry ">
+                        Configuration
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+        
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            <input type="checkbox" id="navtree-f1bc6139" class="gdoc-nav__toggle" >
+            <label for="navtree-f1bc6139" class="flex justify-between">
+            
+            
+                <span class="flex">
                     <a href="/sys_prerequisites/" class="gdoc-nav__entry ">
                         System Install
                     </a>
                 </span>
             
+            
+                <svg class="icon gdoc_keyborad_arrow_left"><use xlink:href="#gdoc_keyborad_arrow_left"></use></svg>
+                <svg class="icon gdoc_keyborad_arrow_down hidden"><use xlink:href="#gdoc_keyborad_arrow_down"></use></svg>
+            </label>
             
 
             
@@ -325,11 +358,44 @@
             
             
                 <span class="flex">
+                    <a href="/changelog/" class="gdoc-nav__entry ">
+                        Changlog
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+        
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            <input type="checkbox" id="navtree-63aeeedd" class="gdoc-nav__toggle" checked>
+            <label for="navtree-63aeeedd" class="flex justify-between">
+            
+            
+                <span class="flex">
                     <a href="/commands/" class="gdoc-nav__entry ">
                         Commands
                     </a>
                 </span>
             
+            
+                <svg class="icon gdoc_keyborad_arrow_left"><use xlink:href="#gdoc_keyborad_arrow_left"></use></svg>
+                <svg class="icon gdoc_keyborad_arrow_down hidden"><use xlink:href="#gdoc_keyborad_arrow_down"></use></svg>
+            </label>
             
 
             
@@ -462,6 +528,30 @@
             
             
         
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
+                    <a href="/commands/binpathsearch/" class="gdoc-nav__entry ">
+                        binpathsearch.py
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
             
             
 
@@ -609,58 +699,6 @@
             
         
     </ul>
-
-            
-            </li>
-            
-            
-        
-            
-            
-
-            
-            
-            
-            
-            
-            
-
-            <li>
-            
-            
-                <span class="flex">
-                    <a href="/about/" class="gdoc-nav__entry ">
-                        About
-                    </a>
-                </span>
-            
-            
-
-            
-            </li>
-            
-            
-        
-            
-            
-
-            
-            
-            
-            
-            
-            
-
-            <li>
-            
-            
-                <span class="flex">
-                    <a href="/changelog/" class="gdoc-nav__entry ">
-                        Changlog
-                    </a>
-                </span>
-            
-            
 
             
             </li>
@@ -826,9 +864,9 @@
 
 <div class="gdoc-tabs">
   
-    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-d2bc39555ba1405a38c6e1860ac479d2" id="tabs-d2bc39555ba1405a38c6e1860ac479d2-0"
+    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-31cb1d5436440ad9a2295116961afaa4" id="tabs-31cb1d5436440ad9a2295116961afaa4-0"
       checked="checked"  />
-    <label for="tabs-d2bc39555ba1405a38c6e1860ac479d2-0" class="gdoc-tabs__label">
+    <label for="tabs-31cb1d5436440ad9a2295116961afaa4-0" class="gdoc-tabs__label">
       Screencast
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
@@ -837,15 +875,16 @@
 <source src="/cli/unicodes.py.webm" type="video/webm">
 </video>
 </div>
+
     </div>
   
-    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-d2bc39555ba1405a38c6e1860ac479d2" id="tabs-d2bc39555ba1405a38c6e1860ac479d2-1"
+    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-31cb1d5436440ad9a2295116961afaa4" id="tabs-31cb1d5436440ad9a2295116961afaa4-1"
        />
-    <label for="tabs-d2bc39555ba1405a38c6e1860ac479d2-1" class="gdoc-tabs__label">
+    <label for="tabs-31cb1d5436440ad9a2295116961afaa4-1" class="gdoc-tabs__label">
       Help
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
-      <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">usage: unicodes.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-f <span class="o">[</span>FILTER <span class="o">[</span>FILTER ...<span class="o">]]]</span>
+      <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">usage: unicodes.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-f <span class="o">[</span>FILTER ...<span class="o">]]</span>
 
 print unicode values and associated information to stdout.
 
@@ -854,14 +893,14 @@ example:
 
 optional arguments:
   -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
-  -f <span class="o">[</span>FILTER <span class="o">[</span>FILTER ...<span class="o">]]</span>, --filter <span class="o">[</span>FILTER <span class="o">[</span>FILTER ...<span class="o">]]</span>
-                        Filter string
+  -f <span class="o">[</span>FILTER ...<span class="o">]</span>, --filter <span class="o">[</span>FILTER ...<span class="o">]</span>
+                        filter results based on fixed string.
 </code></pre></div>
     </div>
   
-    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-d2bc39555ba1405a38c6e1860ac479d2" id="tabs-d2bc39555ba1405a38c6e1860ac479d2-2"
+    <input type="radio" class="gdoc-tabs__control hidden" name="tabs-31cb1d5436440ad9a2295116961afaa4" id="tabs-31cb1d5436440ad9a2295116961afaa4-2"
        />
-    <label for="tabs-d2bc39555ba1405a38c6e1860ac479d2-2" class="gdoc-tabs__label">
+    <label for="tabs-31cb1d5436440ad9a2295116961afaa4-2" class="gdoc-tabs__label">
       Source
     </label>
     <div class="gdoc-markdown--nested gdoc-tabs__content">
@@ -879,33 +918,19 @@ optional arguments:
 </span><span class="s2">&#34;&#34;&#34;</span>
 
 <span class="n">cli</span> <span class="o">=</span> <span class="n">cli</span><span class="o">.</span><span class="n">Cli</span><span class="p">(</span><span class="n">dstring</span><span class="p">)</span>
+<span class="n">cli</span><span class="o">.</span><span class="n">add_filter</span><span class="p">()</span>
 <span class="n">parser</span> <span class="o">=</span> <span class="n">cli</span><span class="o">.</span><span class="n">parser</span>
-
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-    <span class="s2">&#34;-f&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;--filter&#34;</span><span class="p">,</span>
-    <span class="n">nargs</span><span class="o">=</span><span class="s2">&#34;*&#34;</span><span class="p">,</span>
-    <span class="n">help</span><span class="o">=</span><span class="s2">&#34;Filter string&#34;</span><span class="p">,</span>
-    <span class="n">action</span><span class="o">=</span><span class="s2">&#34;append&#34;</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
-    <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-    <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-<span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="s2">&#34;&#34;&#34;Run main function.&#34;&#34;&#34;</span>
-    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">filter</span><span class="p">:</span>
-        <span class="n">fvalues</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">filter</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">fvalues</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chars</span><span class="o">.</span><span class="n">unicodes</span><span class="p">()):</span>
         <span class="n">_int</span><span class="p">,</span> <span class="n">_hex</span><span class="p">,</span> <span class="n">_chr</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uval</span><span class="p">,</span> <span class="n">htmlent</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
         <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&#34;{_chr} {name} int:{_int} hex:{_hex.zfill(2)} {uval} {htmlent}&#34;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">fvalues</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">filter</span><span class="p">:</span>
             <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
             <span class="k">continue</span>
-        <span class="k">if</span> <span class="nb">all</span><span class="p">([</span><span class="n">i</span> <span class="ow">in</span> <span class="n">line</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fvalues</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="nb">all</span><span class="p">([</span><span class="n">i</span> <span class="ow">in</span> <span class="n">line</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">filter</span><span class="p">]):</span>
             <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 
@@ -913,9 +938,7 @@ optional arguments:
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">cli</span><span class="o">.</span><span class="n">get_parse</span><span class="p">()</span>
-    <span class="c1"># args = cli.get_parse([&#34;-f&#34;, &#34;cat&#34;, &#34;-f&#34;, &#34;grin&#34;])</span>
     <span class="n">cli</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-    <span class="c1"># args = cli.get_parse(&#34;--help&#34;)</span>
 
 </code></pre></div>
     </div>

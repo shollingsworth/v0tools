@@ -1,35 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """UNIT Test for Cli bin/php_search_vuln.py."""
-from v0tools.cli import Cli
 from v0tools import exceptions
 import unittest
-from io import StringIO
-import sys
-import contextlib
 import pathlib
 import tempfile
 import os
 import pathlib
-
-BASE = pathlib.Path(__file__).parent.parent.resolve()
-
-sys.path.append(str(BASE.joinpath("bin")))
-name = "php_search_vuln"
-cli_mod = __import__(name)
-cli = cli_mod.cli  # type: Cli
+from v0tools.tests import CliTest
 
 
-class Test_php_search_vuln(unittest.TestCase):
+class Test_php_search_vuln(CliTest):
+    SCRIPT_NAME = "php_search_vuln.py"
+
+    def setUp(self):
+        self.init()
+
     def test_help(self):
-        inp_args = "--help"
-        with StringIO() as buf, contextlib.redirect_stdout(buf):
-            with self.assertRaises(SystemExit) as err:
-                args = cli.get_parse(inp_args)
-                print(args)
-            self.assertEqual(err.exception.code, 0)  # exits ok
-            output = buf.getvalue()
-        self.assertIn("--help", output)
+        self.match_zero_exit_code("--help", "--help")
 
     def test_run(self):
         should_see = [
@@ -49,10 +37,7 @@ class Test_php_search_vuln(unittest.TestCase):
             if not dest.is_dir():
                 raise RuntimeError("git clone didn't work")
             inp_args = str(dest)
-            with StringIO() as buf, contextlib.redirect_stdout(buf):
-                args = cli.get_parse(inp_args)
-                cli.run_nocatch(args)
-                output = buf.getvalue()
+            output = self.run_cli(inp_args)
         for i in should_see:
             self.assertIn(i, output)
 
@@ -64,11 +49,11 @@ class Test_php_search_vuln(unittest.TestCase):
             no_files.joinpath("test.txt").write_text("Testing")
 
             inp_args = str(no_files)
-            args = cli.get_parse(inp_args)
-            with StringIO() as buf, contextlib.redirect_stdout(buf):
-                self.assertRaisesRegex(
-                    exceptions.NoAction, r".*No files.*", cli.run_nocatch, args
-                )
+            self.exception_raises_with_regex(
+                inp_args,
+                exceptions.NoAction,
+                r".*No files.*",
+            )
 
     def test_no_results(self):
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -78,11 +63,11 @@ class Test_php_search_vuln(unittest.TestCase):
             no_d.joinpath("test.php").write_text("Testing")
 
             inp_args = str(no_d)
-            args = cli.get_parse(inp_args)
-            with StringIO() as buf, contextlib.redirect_stdout(buf):
-                self.assertRaisesRegex(
-                    exceptions.NoAction, r".*Could not find.*", cli.run_nocatch, args
-                )
+            self.exception_raises_with_regex(
+                inp_args,
+                exceptions.NoAction,
+                r".*Could not find.*",
+            )
 
 
 if __name__ == "__main__":

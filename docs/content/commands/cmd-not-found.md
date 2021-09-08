@@ -16,7 +16,7 @@ weight: 99
 > **Thanks to https://command-not-found.com/ and**
 > **Ƚukasz Lach https://twitter.com/lach_dev for hosting the site**
 
-{{< tabs "d903902a44e8ed0455175edd709eb497" >}}
+{{< tabs "eed159a89002d10da6f2c7d8fe0f3bf5" >}}
 {{< tab "Screencast" >}}
 <div class="video-container">
 <video controls autoplay="true" loop="true">
@@ -85,10 +85,11 @@ def main(args):
     print(json.dumps(vals, indent=4, separators=(",", " : ")))
 
 
+cli.set_entrypoint(main)
+
 if __name__ == "__main__":
     args = cli.get_parse()
     # args = cli.get_parse("booga")
-    cli.set_entrypoint(main)
     cli.run(args)
 
 ```
